@@ -1,10 +1,12 @@
 div.landing-page {
-    background: url(../img/landing_img.jpg) no-repeat 0 0/cover;
-    width: 100vw;
+    background: url(../img/landing_img.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
     height: 100vh;
     position: relative;
-    padding: 0 slice(200px);
-    @include flex(null, center);
+    z-index: 1;
+    // padding: 0 slice(200px);
+    @include flex(center, center);
 
     &::after {
         content: "";
@@ -18,10 +20,12 @@ div.landing-page {
     }
 
     div.landing-content {
+        width: 79%;
         p:first-child {
             font: {
                 size: 60px;
             }
+            max-width: 300px;
             color: $white;
             line-height: 60px;
             text-shadow: 0 1px 5px #000;
@@ -43,6 +47,69 @@ div.landing-page {
             background: $prim;
             color: $white;
             box-shadow: 0 3px 0 rgba(#000, 0.53);
+
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+
+    @include tablet {
+        div.landing-content {
+            @include flex(center, center, column);
+            width: 100%;
+
+            p:first-child {
+                max-width: 400px;
+                text-align: center;
+    
+                & + p {
+                    font-size: 12px;
+                    font-weight: weight(regular);
+                    margin-bottom: 10px;
+                    margin-top: 5px;
+                }
+            }
+
+            button {
+                &:last-child {
+                    display: inline;
+                    background: transparent;
+                    border: 1px solid;
+                    margin-top: 10px;
+                }
+            }
+
+        }
+
+    }
+
+    @include mobile {
+        div.landing-content {
+            @include flex(center, center, column);
+            width: 100%;
+            p:first-child {
+                font: {
+                    weight: weight(medium);
+                    // javascript will work here
+                    size: (320 * 40px / 320);
+                }
+                // max-width: 300px;
+                text-align: center;
+                line-height: (320 * 40px / 320);
+    
+                & + p {
+                    font-size: 9px;
+                    font-weight: weight(regular);
+                    margin-bottom: 10px;
+                    margin-top: 5px;
+                }
+            }
+            button {
+                &:last-child {
+                    display: block;
+                }
+            }
         }
     }
 }

@@ -1,23 +1,15 @@
 div.header {
     $pl: 10.5%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     height: slice(100px);
     background: $prim;
     box-shadow: 0 slice(2px) slice(9px) rgba(#000, 0.4);
     @include flex(null, center);
-    // padding-right: $pl;
-    /* @include small-laptop {
-        padding-right: $pl / 2;
-    }
-    @include tablet {
-        padding-right: $pl / 2.5;
-    } */
 
     .logo {
         $width: 450px;
-        $pl: 200px;
         max-width: slice($width);
         flex: 2;
         @include small-laptop {
@@ -26,21 +18,11 @@ div.header {
         @include tablet {
             flex: 1.7;
         }
-        // min-width: slice(250px);
         height: slice(100px);
         background: $white;
         border-radius: 0 50px 50px 0;
         box-shadow: 0 slice(1px) slice(5px) #000;
         @include flex(flex-end, center);
-        // padding-left: slice($pl);
-        /* @include small-laptop {
-            width: slice($width / 1.2);
-            padding-left: $pl / 1.3;
-        }
-        @include tablet {
-            width: slice($width / 2);
-            padding-left: $pl / 4;
-        } */
 
         img {
             $width: 183px;
@@ -51,6 +33,10 @@ div.header {
                 // margin-left: 20px;
             }
         }
+    }
+
+    .hamburger {
+        display: none;
     }
 
     .nav {
@@ -84,10 +70,6 @@ div.header {
             
             min-width: 90px;
             height: slice(67px);
-            /* @include tablet {
-                width: slice($width / 1.2);
-                height: slice($height / 1.1);
-            } */
             font: {
                 size: slice(17px);
                 weight: weight(medium);
@@ -107,6 +89,54 @@ div.header {
             }
         }
     }
+}
+@include mobile {
+    div.header {
+        flex-wrap: wrap;
+        justify-content: space-between;
 
-    
+        .logo {
+            // flex: .6;
+            // width: 50%;
+            flex: 0;
+            // flex: 0;
+            max-width: none;
+
+            img {
+                width: auto;
+                margin-left: 10px;
+            }
+        }
+        .hamburger {
+            @include flex(space-evenly, center, column);
+            height: 70%;
+            span {
+                height: 2px;
+                width: 40px;
+                background: $white;
+            }
+            margin-right: 20px;
+        }
+        .nav {
+            min-width: 100%;
+            @include flex(null,null,null,wrap);
+            background: $white;
+            padding: 10px 0;
+            display: none;
+            button {
+            }
+
+            li {
+                margin: 7px 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            a {
+                color: $black;
+                font-size: 16px;
+                // font-weight: weight(light);
+            }
+        }
+    }
 }
