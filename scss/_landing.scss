@@ -1,0 +1,48 @@
+div.landing-page {
+    background: url(../img/landing_img.jpg) no-repeat 0 0/cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    padding: 0 slice(200px);
+    @include flex(null, center);
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(#000, .25);
+        z-index: -1;
+    }
+
+    div.landing-content {
+        p:first-child {
+            font: {
+                size: 60px;
+            }
+            color: $white;
+            line-height: 60px;
+            text-shadow: 0 1px 5px #000;
+
+            & + p {
+                color: $white;
+                font-size: 13px;
+                font-weight: weight(light);
+
+                span {
+                    color: gold;
+                }
+            }
+        }
+        button {
+            width: 165px;
+            height: 55px;
+            border-radius: 32px;
+            background: $prim;
+            color: $white;
+            box-shadow: 0 3px 0 rgba(#000, 0.53);
+        }
+    }
+}

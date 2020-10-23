@@ -1,0 +1,53 @@
+div.header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: slice(100px);
+    background: $prim;
+    box-shadow: 0 slice(2px) slice(9px) rgba(#000, 0.4);
+    @include flex(null, center);
+    padding-right: slice(200px);
+
+    .logo {
+        width: slice(450px);
+        height: slice(100px);
+        background: $white;
+        border-radius: 0 50px 50px 0;
+        box-shadow: 0 slice(1px) slice(5px) #000;
+        @include flex(null, center);
+        padding-left: slice(200px);
+
+        img {
+            width: slice(183px);
+        }
+    }
+
+    .nav {
+        @include flex(space-evenly);
+        flex: 1;
+        margin-left: slice(350px);
+        margin-right: slice(10px);
+        a {
+            font: {
+                size: slice(17px);
+                weight: weight(medium);
+            }
+            color: $white;
+            // color: $black;
+        }
+    }
+
+    button {
+        width: slice(200px);
+        height: slice(67px);
+        font: {
+            size: slice(17px);
+            weight: weight(medium);
+        }
+        background: transparent;
+        border: 1px solid $white;
+        color: $white;
+        border-radius: 32px;
+        @include flex(center, center);
+    }
+}

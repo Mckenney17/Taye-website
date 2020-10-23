@@ -1,0 +1,30 @@
+$prim: #1f7fd6;
+$grey: #333;
+$white: #fff;
+$black: #000;
+$footBlack: #161616;
+
+@mixin flex($jc:null, $ai:null, $dir:null, $fw:null) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $dir;
+    flex-wrap: $fw;
+}
+
+$font-weights: (
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    black: 900,
+);
+
+@function weight($weightArg) {
+    @return map-get($font-weights, $weightArg);
+}
+
+@function slice($value) {
+    @return $value * (69 / 100);
+}
