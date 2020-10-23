@@ -28,3 +28,27 @@ $font-weights: (
 @function slice($value) {
     @return $value * (69 / 100);
 }
+
+@mixin big-screen {
+    @media (min-width: 992px) {
+        @content;
+    } 
+}
+
+@mixin small-laptop {
+    @media (max-width: 992px) {
+        @content;
+    } 
+}
+
+@mixin tablet {
+    @media (max-width: 768px) {
+        @content;
+    } 
+}
+
+@mixin mobile {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
