@@ -1,0 +1,279 @@
+div.landing-content {
+    p:first-child {
+        font: {
+            size: 60px;
+        }
+        max-width: 300px;
+        color: $white;
+        line-height: 60px;
+        text-shadow: 0 1px 5px #000;
+
+        & + p {
+            color: $white;
+            font-size: 13px;
+            font-weight: weight(light);
+            margin: 5px 0;
+            white-space: nowrap;
+            span {
+                color: gold;
+            }
+            img {
+                display: none;
+            }
+            @include small-laptop-up {
+                max-width: 600px;
+                position: relative;
+                img {
+                    display: inline;
+                    position: absolute;
+                    right: -17%;
+                    top: 20px;
+                }
+                
+            }
+        }
+    }
+    button {
+        width: 165px;
+        height: 55px;
+        border-radius: 32px;
+        background: $prim;
+        color: $white;
+        box-shadow: 0 3px 0 rgba(#000, 0.53);
+
+        &:last-child {
+            display: none;
+        }
+    }
+    @include tablet {
+        @include flex(center, center, column);
+        width: 100%;
+    
+        p:first-child {
+            max-width: 400px;
+            text-align: center;
+    
+            & + p {
+                font-size: 12px;
+                font-weight: weight(regular);
+                margin-bottom: 10px;
+                margin-top: 5px;
+            }
+        }
+    
+        button {
+            &:last-child {
+                display: inline;
+                background: transparent;
+                border: 1px solid;
+                margin-top: 10px;
+            }
+        }
+    
+    }
+    @include mobile {
+        @include flex(center, center, column);
+        width: 100%;
+        p:first-child {
+            font: {
+                weight: weight(medium);
+                // javascript will work here
+                size: (320 * 40px / 320);
+            }
+            // max-width: 300px;
+            text-align: center;
+            line-height: (320 * 40px / 320);
+
+            & + p {
+                font-size: 9px;
+                font-weight: weight(regular);
+                margin-bottom: 10px;
+                margin-top: 5px;
+            }
+        }
+        button {
+            &:last-child {
+                display: block;
+            }
+        }
+    }
+@include small-laptop-up {
+    flex: 1;
+    max-width: 410px;
+    margin-right: 10%;
+}
+}
+
+@include small-laptop-up {
+    .order-form {
+        flex: 1;
+        // margin-right: 10%;
+        max-width: 300px;
+        width: 300px;
+        height: 500px;
+        margin-top: 60px;
+        background: $white;
+        border-radius: 5px;
+        box-shadow: 0 0 4px rgba(#000, .3);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.logo {
+    $width: 450px;
+    max-width: slice($width);
+    flex: 2;
+    @include small-laptop {
+        flex: 1.5;
+    }
+    @include tablet {
+        flex: 1.7;
+    }
+    height: slice(100px);
+    background: $white;
+    border-radius: 0 50px 50px 0;
+    box-shadow: 0 slice(1px) slice(5px) #000;
+    @include flex(flex-end, center);
+
+    img {
+        $width: 183px;
+        width: slice($width);
+        margin-right: 45px;
+        @include tablet {
+            margin-right: 30px;
+            // margin-left: 20px;
+        }
+    }
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav {
+    @include flex(space-evenly, center);
+    width: 50%;
+    flex: 3;
+    @include tablet {
+        flex: 4;
+    }
+    margin-left: 15%;
+    @include small-laptop {
+        margin-left: 5%;
+    }
+    @include tablet {
+        margin-left: 0;
+    }
+    // margin-right: slice(10px);
+    a {
+        font: {
+            size: slice(17px);
+            weight: weight(medium);
+        }
+        color: $white;
+        // color: $black;
+    }
+
+    button {
+        $width: 200px;
+        $height: 67px;
+        max-width: slice($width);
+        
+        min-width: 90px;
+        height: slice(67px);
+        font: {
+            size: slice(17px);
+            weight: weight(medium);
+        }
+        background: transparent;
+        border: 1px solid $white;
+        color: $white;
+        border-radius: 32px;
+        @include flex(center, center);
+        flex: 1;
+        @include tablet {
+            flex: .6;
+        }
+        align-self: flex-end;
+        @include big-screen {
+            margin-right: 10%;
+        }
+    }
+}
+
+@include mobile {
+div.header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .logo {
+        // flex: .6;
+        // width: 50%;
+        flex: 0;
+        // flex: 0;
+        max-width: none;
+
+        img {
+            width: auto;
+            margin-left: 10px;
+        }
+    }
+    .hamburger {
+        @include flex(space-evenly, center, column);
+        height: 70%;
+        span {
+            height: 2px;
+            width: 40px;
+            background: $white;
+        }
+        margin-right: 20px;
+    }
+    .nav {
+        min-width: 100%;
+        @include flex(null,null,null,wrap);
+        background: $white;
+        padding: 10px 0;
+        display: none;
+        button {
+        }
+
+        li {
+            margin: 7px 0;
+            width: 100%;
+            text-align: center;
+        }
+        
+        a {
+            color: $black;
+            font-size: 16px;
+            // font-weight: weight(light);
+        }
+    }
+}
+}

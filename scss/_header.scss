@@ -8,68 +8,69 @@ div.header {
     box-shadow: 0 slice(2px) slice(9px) rgba(#000, 0.4);
     @include flex(null, center);
 
-    .logo {
-        $width: 450px;
-        max-width: slice($width);
-        flex: 2;
-        @include small-laptop {
-            flex: 1.5;
-        }
-        @include tablet {
-            flex: 1.7;
-        }
-        height: slice(100px);
-        background: $white;
-        border-radius: 0 50px 50px 0;
-        box-shadow: 0 slice(1px) slice(5px) #000;
-        @include flex(flex-end, center);
 
-        img {
-            $width: 183px;
-            width: slice($width);
-            margin-right: 45px;
-            @include tablet {
-                margin-right: 30px;
-                // margin-left: 20px;
+    .item-1, .item-2, .item-3 {
+        height: 100%;
+    }
+    .item-1 {
+        flex: 1;
+        min-width: 180px;
+        // background: red;
+
+        .logo {
+            width: 100%;
+            height: 100%;
+            background: $white;
+            border-radius: 0 50px 50px 0;
+            box-shadow: 0 slice(1px) slice(5px) #000;
+            @include flex(flex-end, center);
+
+            img {
+                margin-right: 15%;
+                width: slice(183px);
             }
         }
     }
 
-    .hamburger {
+    .item-extra {
         display: none;
     }
 
-    .nav {
-        @include flex(space-evenly, center);
-        width: 50%;
+    .item-2 {
         flex: 3;
-        @include tablet {
-            flex: 4;
-        }
-        margin-left: 15%;
-        @include small-laptop {
-            margin-left: 5%;
-        }
-        @include tablet {
-            margin-left: 0;
-        }
-        // margin-right: slice(10px);
-        a {
-            font: {
-                size: slice(17px);
-                weight: weight(medium);
+        // background: orange;
+        @include flex(flex-end);
+
+        .nav {
+            // background: cyan;
+            width: 80%;
+            height: 100%;
+            @include flex(space-evenly, center);
+
+            @include tablet {
+                width: 100%;
             }
-            color: $white;
-            // color: $black;
+
+            a {
+                font: {
+                    size: slice(17px);
+                    weight: weight(medium);
+                }
+                color: $white;
+            }
         }
+    }
+
+    .item-3 {
+        flex: 1;
+        // background: yellow;
+
+        @include flex(null, center);
 
         button {
-            $width: 200px;
-            $height: 67px;
-            max-width: slice($width);
-            
-            min-width: 90px;
-            height: slice(67px);
+            width: 50%;
+            min-width: 120px;
+            height: 50px;
             font: {
                 size: slice(17px);
                 weight: weight(medium);
@@ -79,64 +80,43 @@ div.header {
             color: $white;
             border-radius: 32px;
             @include flex(center, center);
-            flex: 1;
-            @include tablet {
-                flex: .6;
-            }
-            align-self: flex-end;
-            @include big-screen {
-                margin-right: 10%;
-            }
         }
     }
-}
-@include mobile {
-    div.header {
+
+    @include mobile {
         flex-wrap: wrap;
-        justify-content: space-between;
-
-        .logo {
-            // flex: .6;
-            // width: 50%;
+        .item-2 {
             flex: 0;
-            // flex: 0;
-            max-width: none;
-
-            img {
-                width: auto;
-                margin-left: 10px;
-            }
-        }
-        .hamburger {
-            @include flex(space-evenly, center, column);
-            height: 70%;
-            span {
-                height: 2px;
-                width: 40px;
-                background: $white;
-            }
-            margin-right: 20px;
-        }
-        .nav {
             min-width: 100%;
-            @include flex(null,null,null,wrap);
-            background: $white;
-            padding: 10px 0;
+        }
+        .item-1 {
+            flex: 2;
+            min-width: none;
+            .logo {
+                justify-content: flex-end;
+                img {
+                    margin-right: 10%;
+                    width: auto;
+                }
+            }
+        }
+        .item-extra {
+            @include flex(flex-end, center);
+            flex: 1;
+            height: 70%;
+            .hamburger {
+                @include flex(space-evenly, center, column);
+                height: 100%;
+                span {
+                    height: 2px;
+                    width: 40px;
+                    background: $white;
+                }
+                margin-right: 20px;
+            }
+        }
+        .item-3 {
             display: none;
-            button {
-            }
-
-            li {
-                margin: 7px 0;
-                width: 100%;
-                text-align: center;
-            }
-            
-            a {
-                color: $black;
-                font-size: 16px;
-                // font-weight: weight(light);
-            }
         }
     }
 }
