@@ -36,25 +36,25 @@ $font-weights: (
 }
 
 @mixin small-laptop {
-    @media (max-width: 993px) {
+    @media (max-width: 992px) {
         @content;
     } 
 }
 
 @mixin small-laptop-up {
-    @media (min-width: 770px) {
+    @media (min-width: 769px) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media (max-width: 769px) {
+    @media (max-width: 768px) {
         @content;
     } 
 }
 
 @mixin mobile {
-    @media (max-width: 577px) {
+    @media (max-width: 576px) {
         @content;
     }
 }

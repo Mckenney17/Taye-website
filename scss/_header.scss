@@ -83,14 +83,39 @@ div.header {
         }
     }
 
+    @include tablet {
+        .item-3 {
+            display: none;
+        }
+    }
+
     @include mobile {
         flex-wrap: wrap;
         .item-2 {
             flex: 0;
             min-width: 100%;
+            height: auto;
+            .nav {
+                @include flex(null,null,null,wrap);
+                background: $white;
+                padding: 10px 0;
+                display: none;
+        
+                li {
+                    margin: 10px 0;
+                    width: 100%;
+                    text-align: center;
+                }
+                
+                a {
+                    color: $black;
+                    font-size: 16px;
+                    // font-weight: weight(light);
+                }
+            }
         }
         .item-1 {
-            flex: 2;
+            flex: 1 2 auto;
             min-width: none;
             .logo {
                 justify-content: flex-end;
@@ -102,7 +127,7 @@ div.header {
         }
         .item-extra {
             @include flex(flex-end, center);
-            flex: 1;
+            flex: 2.5 1 auto;
             height: 70%;
             .hamburger {
                 @include flex(space-evenly, center, column);
