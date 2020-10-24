@@ -378,12 +378,15 @@ div.landing-page .landing-contents .item-1 div.landing-prim-content .ctas button
   div.landing-page .landing-contents .item-1 div.landing-prim-content p:first-child {
     max-width: 600px;
     text-align: center;
+    width: 100%;
   }
   div.landing-page .landing-contents .item-1 div.landing-prim-content p:first-child + p {
     font-size: 12px;
     font-weight: 400;
     margin-bottom: 10px;
     margin-top: 5px;
+    text-align: center;
+    width: 100%;
   }
   div.landing-page .landing-contents .item-1 div.landing-prim-content .ctas button:last-child {
     display: inline;
@@ -452,13 +455,84 @@ div.landing-page .landing-contents .item-1 div.landing-prim-content .ctas button
 @media (min-width: 769px) {
   div.landing-page .landing-contents .item-2 .order-form {
     font-family: Dosis;
-    width: 300px;
-    height: 500px;
+    width: 296px;
+    height: 485px;
     margin-top: 60px;
     background: #fff;
     border-radius: 5px;
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
             box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    padding: 0 20px;
+  }
+  div.landing-page .landing-contents .item-2 .order-form .form-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  div.landing-page .landing-contents .item-2 .order-form form .field {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  div.landing-page .landing-contents .item-2 .order-form form .field input {
+    width: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    border: none;
+    outline: none;
+    height: 40px;
+    border-radius: 5px;
+    background: #ececec;
+    font-family: Dosis;
+    margin: 8.5px 0;
+    padding-left: 15px;
+    font-weight: 500;
+  }
+  div.landing-page .landing-contents .item-2 .order-form form .field input::-webkit-input-placeholder {
+    color: #000;
+  }
+  div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3), div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) {
+    position: relative;
+  }
+  div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) input, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) input {
+    max-width: 49%;
+  }
+  div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) input:first-child, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) input:first-child {
+    cursor: pointer;
+  }
+  div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3)::after, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2)::after {
+    position: absolute;
+    content: '';
+    top: 40%;
+    bottom: 0;
+    left: 38%;
+    right: 0;
+    margin: auto auto;
+    background: url(../img/dropdown.png) no-repeat;
+    background-size: auto;
+  }
+  div.landing-page .landing-contents .item-2 .order-form form .notice {
+    font-size: 12px;
+    text-align: center;
+    line-height: 4px;
+    color: silver;
+    font-weight: 100;
+  }
+  div.landing-page .landing-contents .item-2 .order-form form button {
+    font-family: Dosis;
+    width: 100%;
+    background: #1f7fd6;
+    height: 50px;
+    margin-top: 17px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
   }
 }
 /*# sourceMappingURL=style.css.map */

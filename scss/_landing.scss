@@ -98,16 +98,19 @@ div.landing-page {
             .item-1 {
                 div.landing-prim-content {
                     @include flex(center, null, null, wrap);
-                
+                    // background: red;
                     p:first-child {
                         max-width: 600px;
                         text-align: center;
+                        width: 100%;
                 
                         & + p {
                             font-size: 12px;
                             font-weight: weight(regular);
                             margin-bottom: 10px;
                             margin-top: 5px;
+                            text-align: center;
+                            width: 100%;
                         }
                     }
                     .ctas {
@@ -170,12 +173,92 @@ div.landing-page {
 
                 .order-form {
                     font-family: Dosis;
-                    width: 300px;
-                    height: 500px;
+                    width: 296px;
+                    height: 485px;
                     margin-top: 60px;
                     background: $white;
                     border-radius: 5px;
                     box-shadow: 0 0 4px rgba(#000, .3);
+                    padding: 0 20px;
+
+                    .form-title {
+                        text-align: center;
+                        margin-top: 20px;
+                        font: {
+                            size: 30px;
+                            // come here
+                            weight: 500;
+                        }
+                        // font-family: Dosis;
+                    }
+
+                    form {
+                        .field {
+                            width: 100%;
+
+                            @include flex(space-between);
+
+                            input {
+                                width: 0;
+                                flex: 1;
+                                border: none;
+                                outline: none;
+                                height: 40px;
+                                border-radius: 5px;
+                                background: #ececec;
+                                font-family: Dosis;
+                                margin: 8.5px 0;
+
+                                padding-left: 15px;
+                                font-weight: 500;
+                                &::-webkit-input-placeholder {
+                                    color: #000;
+                                }
+                            }
+
+                            &:nth-last-of-type(3), &:nth-last-of-type(2) {
+                                input {
+                                    max-width: 49%;
+                                    &:first-child {
+                                        cursor: pointer;
+
+                                    }
+                                }
+                                position: relative;
+
+                                &::after {
+                                    position: absolute;
+                                    content: '';
+                                    top: 40%;
+                                    bottom: 0;
+                                    left: 38%;
+                                    right: 0;
+                                    margin: auto auto;
+                                    background: url(../img/dropdown.png) no-repeat;
+                                    background-size: auto;
+                                }
+                            }
+
+                        }
+
+                        .notice {
+                            font-size: 12px;
+                            text-align: center;
+                            line-height: 4px;
+                            color: silver;
+                            font-weight: 100;
+                        }
+                        button {
+                            font-family: Dosis;
+                            width: 100%;
+                            background: $prim;
+                            height: 50px;
+                            margin-top: 17px;
+                            border-radius: 5px;
+                            color: $white;
+                            font-weight: 500;
+                        }
+                    }
                 }
             }
         }
