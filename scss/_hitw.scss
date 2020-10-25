@@ -2,7 +2,7 @@ div.how-it-works-section {
     width: 84%;
     margin: 0 auto;
     @include flex(center, center, column);
-    padding-top: 1.5%;
+    padding-top: 5%;
 
     p:first-child {
         color: $grey;
@@ -11,6 +11,13 @@ div.how-it-works-section {
             weight: weight(black);
         }
         line-height: 40px;
+        @include tablet {
+            font: {
+                size: 5vw;
+                weight: weight(black);
+            }   
+            line-height: 5vw;
+        }
 
         span:first-child {
             font-weight: weight(light);
@@ -27,6 +34,9 @@ div.how-it-works-section {
             span {
                 color: $prim;
             }
+            @include mobile {
+                font-size: 2.5vw;
+            }
         }
     }
 
@@ -34,27 +44,55 @@ div.how-it-works-section {
         padding: 0 2%;
         // border: 1px solid;
         margin-top: 3%;
-
+        
         @include flex(space-evenly);
         flex-wrap: wrap;
-
+        
         
         .step {
             width: 370px;
+            
+            @include mobile {
+                width: 95%;
+            }
+            margin-top: 35px;
             // background: red;
             @for $num from 1 through 5 {
                 #step-ill-box-#{ $num } {
                     background-image: stepIll($num);
                 }
+                &#step-#{ $num } {
+                    position: relative;
+                    
+                    &::after {
+                        position: absolute;
+                        content: "#{ $num }";
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        background: #fff;
+                        font-size: 21px;
+                        font-weight: weight(medium);
+                        top: -30px;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                        box-shadow: 0 0 5px rgba($prim, .3);
+                        @include flex(center, center);
+                        color: $prim;
+                    }
+                }
             }
             .step-ill-box {
+                border-radius: 50px 0;
                 height: 230px;
                 background-size: 100% auto;
                 background-repeat: no-repeat;
+                background-position: center;
                 // border: 1px solid;
                 box-shadow: 2px 0 0 $prim,
-                            -2px 0 0 $prim,
-                            0 -1px 3px rgba($prim, .2);
+                -2px 0 0 $prim,
+                0 -1px 1px rgba($prim, .2);
             }
 
 
@@ -68,7 +106,7 @@ div.how-it-works-section {
                 text-align: center;
                 // background: pink;
                 max-width: 250px;
-                margin: 15px auto;
+                margin: 10px auto 20px;
                 span {
                     color: $prim;
                 }

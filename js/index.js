@@ -1,1 +1,1 @@
-document.body.scrollTo(0, 1000);
+document.body.scrollTo(0, 600);
