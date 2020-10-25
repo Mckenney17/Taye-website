@@ -1,0 +1,78 @@
+div.how-it-works-section {
+    width: 84%;
+    margin: 0 auto;
+    @include flex(center, center, column);
+    padding-top: 1.5%;
+
+    p:first-child {
+        color: $grey;
+        font: {
+            size: 40px;
+            weight: weight(black);
+        }
+        line-height: 40px;
+
+        span:first-child {
+            font-weight: weight(light);
+
+            & + span {
+                color: $prim;
+            }
+        }
+
+        & + p {
+            color: $grey;
+            font-weight: weight(medium);
+
+            span {
+                color: $prim;
+            }
+        }
+    }
+
+    .steps {
+        padding: 0 2%;
+        // border: 1px solid;
+        margin-top: 3%;
+
+        @include flex(space-evenly);
+        flex-wrap: wrap;
+
+        
+        .step {
+            width: 370px;
+            // background: red;
+            @for $num from 1 through 5 {
+                #step-ill-box-#{ $num } {
+                    background-image: stepIll($num);
+                }
+            }
+            .step-ill-box {
+                height: 230px;
+                background-size: 100% auto;
+                background-repeat: no-repeat;
+                // border: 1px solid;
+                box-shadow: 2px 0 0 $prim,
+                            -2px 0 0 $prim,
+                            0 -1px 3px rgba($prim, .2);
+            }
+
+
+
+            .step-text {
+                color: $grey;
+                font: {
+                    size: 16px;
+                    weight: weight(bold);
+                }
+                text-align: center;
+                // background: pink;
+                max-width: 250px;
+                margin: 15px auto;
+                span {
+                    color: $prim;
+                }
+            }
+        }
+    }
+}

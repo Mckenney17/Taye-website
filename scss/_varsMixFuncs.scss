@@ -21,8 +21,20 @@ $font-weights: (
     black: 900,
 );
 
+$ills-map: (
+    step-1-ill: url(../img/step_1.png),
+    step-2-ill: url(../img/step_2.png),
+    step-3-ill: url(../img/step_3.png),
+    step-4-ill: url(../img/step_4.png),
+    step-5-ill: url(../img/step_5.png),
+);
+
 @function weight($weightArg) {
     @return map-get($font-weights, $weightArg);
+}
+
+@function stepIll($stepNum) {
+    @return map-get($ills-map, step-#{ $stepNum }-ill);
 }
 
 @function slice($value) {
