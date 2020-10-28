@@ -1,0 +1,116 @@
+div.testimonials-section {
+    background: #f6f9fc;
+    // width: 84%;
+    padding: 3vw 12% 0;
+    margin: 0 auto;
+    height: initial;
+    @include flex(center, center, column);
+    // padding-top: 1%;
+
+    p:first-child {
+        color: $grey;
+        font: {
+            size: 30px;
+            weight: weight(black);
+        }
+        line-height: 35px;
+        @include small-laptop-up {
+            font: {
+                size: 2.5vw;
+                weight: weight(black);
+            }
+            line-height: 3.5vw;
+        }
+        @include tablet {
+            font: {
+                size: 3.5vw;
+                weight: weight(black);
+            }   
+            line-height: 4.5vw;
+        }
+
+        span:first-child {
+            font-weight: weight(light);
+
+            & + span {
+                color: $prim;
+            }
+        }
+
+        & + p {
+            color: $grey;
+            font-weight: weight(medium);
+
+            span {
+                color: $prim;
+            }
+            @include mobile {
+                font-size: 2.5vw;
+            }
+        }
+    }
+    
+    .swiper-wrapper {
+        height: auto;
+    }
+    .testimonials-cont {
+        margin-top: 25px;
+        width: 100%;
+        @include flex(space-between);
+        .testimonial {
+            width: 300px;
+            height: auto;
+            @include flex(center, center, column);
+            .img-circle {
+                width: 142px;
+                height: 142px;
+                border: 1px solid #dedede;
+                border-radius: 50%;
+                overflow: hidden;
+                padding: 4px;
+                background: url(../img/testifier.png) no-repeat center/auto content-box content-box;
+            }
+            .rating-stars {
+                color: #EFCE4A;
+
+                i {
+                    font-style: normal;
+                    &::before {
+                        font-family: 'Font Awesome 5 Free Solid';
+                        content: "\f005";
+                    }
+                    &:last-child {
+                        &::before {
+                            font-family: 'Font Awesome 5 Free Regular';
+                            content: "\f005";
+                        }
+                    }
+                }
+            }
+            .testimony {
+                text-align: center;
+                font-size: 12px;
+                line-height: 16px;
+                color: $grey;
+                max-width: 250px;
+            }
+        }
+    }
+    
+    .caro-nav {
+        margin: 4% 0;
+        width: 30px;
+        @include flex(space-evenly);
+
+        span {
+            width: 6px;
+            height: 6px;
+            background: #505050;
+            border-radius: 50%;
+
+            &:first-child {
+                background: $prim;
+            }
+        }           
+    }
+}

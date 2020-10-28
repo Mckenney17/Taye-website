@@ -1,5 +1,6 @@
 button {
     cursor: pointer;
+    font-family: Poppins;
 }
 
 html, body {
@@ -19,7 +20,7 @@ div.order-now-bar {
     @include big-screen {
         width: 100%;
         background: $prim;
-        margin: 40px 0;
+        margin: 40px 0 0;
         padding: 1% 10%;
         @include flex(center, center);
         color: $white;
