@@ -59,6 +59,12 @@ $ills-map: (
     }
 }
 
+@mixin tablet-up {
+    @media (min-width: 577px) {
+        @content;
+    }
+}
+
 @mixin tablet {
     @media (max-width: 768px) {
         @content;

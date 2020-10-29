@@ -17,7 +17,8 @@ html, body {
 
 div.order-now-bar {
     display: none;
-    @include big-screen {
+    @include tablet-up {
+        white-space: nowrap;
         width: 100%;
         background: $prim;
         margin: 40px 0 0;
@@ -25,21 +26,27 @@ div.order-now-bar {
         @include flex(center, center);
         color: $white;
         font: {
-            size: 1.2vw;
+            size: 16px;
             weight: weight(semibold);       
+        }
+        @include small-laptop {
+            font-size: 11px;
         }
         span {
             color: gold;
         }
     
         button {
-            width: 165px;
-            height: 55px;
             border-radius: 32px;
             background: transparent;
             color: $white;
             border: 1px solid $white;
             margin-left: 5%;
+            padding: 15px 30px;
+            font-size: 16px;
+            @include small-laptop {
+                font-size: 11px;
+            }
         }
     }
 }
