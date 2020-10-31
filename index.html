@@ -66,11 +66,11 @@
                             </div>
                             <div class="field">
                                 <input disabled type="text" name='food' id='food' placeholder="Food">
-                                <input type="number" name='food-amount' id='food-amount' placeholder="Amount">
+                                <input type="text" name='food-amount' id='food-amount' placeholder="Amount">
                             </div>
                             <div class="field">
                                 <input disabled type="text" name='addon' id='addon' placeholder="Add-On">
-                                <input type="number" name='addon-amount' id='addon-amount' placeholder="Amount">
+                                <input type="text" name='addon-amount' id='addon-amount' placeholder="Amount">
                             </div>
                             <div class="notice">Food + Add-On must 500 Naira in Total</div>
                             <button type="submit">PLACE YOUR ORDER</button>
@@ -119,15 +119,18 @@
                     <div class="testimony">
                         <span>“</span>
                         <p class="testimony-content">GigOverflow Services provide us with insight into the health of our network something we couldn’t quantify in the past.
-                            <span>Donald Anfuso
-                                <span>
+                            <span id='test-info'>
+                                <span id='test-pic'></span>
+                                <span id='test-name'>McKenney</span>
+                                <span id='test-star'>
                                     <i></i>
                                     <i></i>
                                     <i></i>
                                     <i></i>
                                     <i></i>
                                 </span>
-                            </span></p>
+                            </span>
+                        </p>
                     </div>
                     <!-- <div class="testimony">
                         <span>“</span>
@@ -162,7 +165,7 @@
                         <p><span>ABOUT <span class="thin">US</span></span></p>
                         <span class='line'></span>
                         <div class="about-content">
-                            Gig Overflow. We relieve you the strees of having to go an buy food in your favorite resturant, far from where you reside. Just Order, and we'll cook the food, and get the food to you in no time.
+                            GigOverflow is a Nigerian resturant aggregator and food delivery startup. The company helps connect with local resturants better and faster while removing inconveniences.
                         </div>
                     </div>
                     <div class="copyright">Copyright &copy; GigOverflow 2020.</div>
@@ -179,9 +182,16 @@
                         <span class='line'></span>
                         <div class="review-form">
                             <form>
-                                <input name="name" id="reviewer-name" type="text" placeholder="Name">
+                                <input name="name" id="reviewer-name" type="text" placeholder="Facebook Username">
                                 <textarea name="review-comment" id="review-comment" placeholder="Comment"></textarea>
-                                <button type="submit">Submit</button>
+                                <div class="form-bottom">
+                                    <button type="submit">Submit</button>
+                                    <div class="social-icons">
+                                        <a href="https://www.facebook.com/gigoverflows" target="_blank"><i class='fab fa-facebook'></i></a>
+                                        <a href="https://www.instagram.com/gigoverflow" target="_blank"><i class='fab fa-instagram'></i></a>
+                                        <a href="https://gmail.com/gigoverflow" target="_blank"><i class='fab fa-gmail'></i></a>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -192,6 +202,37 @@
             
             </div>
         </div>
+        <div class="food-list" id="side-dish">
+            <div class="search-bar">
+                <input type="text" placeholder="Main Dish">
+                <button id='set-food'>SET</button>
+            </div>
+            <div class="food">
+                <p class="food-name" id='eba'>Eba</p>
+                <span class='food-selector' id='eba-select'></span>
+            </div>
+            <div class="food">
+                <p class="food-name" id='iyan'>Iyan</p>
+                <span class='food-selector' id='iyan-select'></span>
+            </div>
+            <div class="food">
+                <p class="food-name" id='fufu'>Fufu</p>
+                <span class='food-selector' id='fufu-select'></span>
+            </div>
+            <div class="food">
+                <p class="food-name" id='rice'>Rice</p>
+                <span class='food-selector' id='rice-select'></span>
+            </div>
+            <div class="food">
+                <p class="food-name" id='beans'>Beans</p>
+                <span class='food-selector' id='beans-select'></span>
+            </div>
+            <div class="food">
+                <p class="food-name" id='asaro'>Asaro</p>
+                <span class='food-selector' id='asaro-select'></span>
+            </div>
+        </div>
+        <div class="add-on-list"></div>
     </div>
     <script src="./js/index.js"></script>
 </body>

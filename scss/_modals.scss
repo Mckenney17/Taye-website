@@ -1,0 +1,106 @@
+div.food-list {
+    position: fixed;
+    @include small-laptop-up {
+        position: absolute;
+    }
+    width: 100%;
+    max-width: 296px;
+    min-width: 296px;
+    background: $white;
+    height: 80%;
+    top: 8%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 3;
+    border-radius: 5px;
+    box-shadow: 0 0 60px 30px rgba(#000, .3);
+    overflow-y: auto;
+
+    .search-bar {
+        position: sticky;
+        top: 10px;
+        width: 90%;
+        margin: 10px auto;
+        height: 45px;
+        @include flex(space-between);
+
+        input {
+            width: 78%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding-left: 15px;
+            font-size: 21px;
+
+            &::-webkit-input-placeholder {
+                color: #ccc;
+            }
+        }
+
+        button {
+            width: 20%;
+            border-radius: 5px;
+            background: $prim;
+            color: $white;
+            font-size: 15px;
+            line-height: 15px;
+        }
+    }
+
+    .food {
+        cursor: pointer;
+        width: 90%;
+        margin: 0 auto;
+        height: 45px;
+        border-bottom: 2px solid #ccc;
+        @include flex(space-between, center);
+
+        .food-selector {
+            cursor: pointer;
+            position: relative;
+            width: 25px;
+            height: 25px;
+            border-style: solid;
+            border-color: #ccc;
+            margin-right: 10px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                margin: auto;
+                background: $prim;
+            }
+        }
+    }
+
+    &#main-dish {
+        .food-selector {
+            border-width: 3px;
+            border-radius: 50%;
+
+            &::after {
+                top: 5px;
+                right: 5px;
+                bottom: 5px;
+                left: 5px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &#side-dish {
+        .food-selector {
+            border-width: 3px;
+            border-radius: 5px;
+
+            &::after {
+                top: 3px;
+                right: 3px;
+                bottom: 3px;
+                left: 3px;
+                border-radius: 2.5px;
+            }
+        }
+    }
+}

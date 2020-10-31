@@ -61,13 +61,13 @@ div.testimonials-section {
             width: 300px;
             min-width: 300px;
             @include tablet {
-                width: 250px;
-                min-width: 250px;
+                width: 290px;
+                min-width: 290px;
             }
 
             @include mobile {
-                width: 80vw;
-                min-width: 80vw;
+                width: 90%;
+                min-width: 90%;
             }
             & > span {
                 line-height: 100px;
@@ -89,6 +89,7 @@ div.testimonials-section {
             .testimony-content {
                 color: $grey;
                 border-right: 1px dashed $prim;
+                padding-right: 5px;
                 font-size: 17px;
                 font-weight: weight(light);
                 margin: 0 auto;
@@ -96,24 +97,39 @@ div.testimonials-section {
                     font-size: 15px;
                 }
 
-                span:last-child {
-                    display: inline-block;
+                #test-info {
+                    // display: inline-block;
                     font-size: 14px;
                     color: $prim;
-                    font-weight: weight(semibold);
+                    font-weight: weight(medium);
                     @include flex(null, center);
-                    span {
-                        margin-left: 15px;
+                    margin-top: 10px;
+
+                    #test-pic {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        padding: 2px;
+                        border: 2px solid $prim;
+                        background: url(../img/testifier.png) no-repeat center 0/contain content-box content-box;
+                    }
+                    #test-star {
+                        // margin-left: 15px;
+                        @include flex();
+                    }
+                    #test-name {
+                        margin: 0 5px;
                     }
                     i {
                         font-style: normal;
-                        color: $prim;
                         &::before {
+                            color: $prim;
                             font-family: 'Font Awesome 5 Free Solid';
                             content: "\f005";
                         }
                         &:last-child {
                             &::before {
+                                color: #ccc;
                                 font-family: 'Font Awesome 5 Free Regular';
                                 content: "\f005";
                             }

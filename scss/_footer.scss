@@ -13,6 +13,9 @@ div.footer {
 
     div[class|="item"] {
         margin: 2% 0;
+        @include mobile {
+            margin: 4% 0;
+        }
         width: 320px;
         @include flex(space-between, null, column);
         & > div {
@@ -85,15 +88,49 @@ div.footer {
                     margin-top: 5px;
                     padding-top: 5px;
                 }
-                button {
-                    align-self: start;
-                    width: 85px;
-                    height: 45px;
-                    border-radius: 50px;
+                .form-bottom {
+                    @include flex(space-between, center);
+                    max-width: 225px;
                     margin-top: 5px;
-                    background: $prim;
-                    color: $white;
-                    font-weight: weight(medium);
+                    button {
+                        align-self: start;
+                        width: 85px;
+                        height: 45px;
+                        border-radius: 50px;
+                        background: $prim;
+                        color: $white;
+                        font-weight: weight(medium);
+                    }
+                    a {
+                        i {
+                            cursor: pointer;
+                            font-style: normal;
+                            color: $white;
+                            font-size: 20px;
+                            &:hover {
+                                color: $prim;
+                            }
+                        }
+                        &:nth-child(1) > i {
+                            &::before {
+                                font-family: 'Font Awesome 5 Brands Regular';
+                                content: "\f09a";
+                            }
+                        }
+                        &:nth-child(2) > i {
+                            &::before {
+                                font-family: 'Font Awesome 5 Brands Regular';
+                                content: "\f16d";
+                            }
+                            margin: 0 3px;
+                        }
+                        &:nth-child(3) > i {
+                            &::before {
+                                font-family: 'Font Awesome 5 Brands Regular';
+                                content: "\f1a0";
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -120,7 +157,7 @@ div.footer {
                     content: "\f005";
                 }
                 &:last-child {
-                    color: $white;
+                    color: #ccc;
                     &::before {
                         font-family: 'Font Awesome 5 Free Regular';
                         content: "\f005";
