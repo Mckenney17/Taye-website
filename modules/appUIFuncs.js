@@ -1,7 +1,22 @@
-import { classAction, setStyle } from './DOMFuncs.js';
+import {
+    classAction,
+    event,
+    setStyle,
+} from './DOMFuncs.js';
 import DOMElems from './DOMElems.js';
 import displayDishModal from './dishModal.js';
-const { orderForm, howItWorksSection } = DOMElems;
+const {
+    orderForm,
+    howItWorksSection,
+    menuBtn,
+    menu,
+    container,
+} = DOMElems;
+
+const toggleMenu = () => {
+    classAction(menuBtn, 'toggle', 'active');
+    setStyle(menu, 'display', menuBtn.classList.contains('active') ? 'flex' : 'none');
+};
 
 const scrollToHowItWorks = () => {
     const position = howItWorksSection.getBoundingClientRect().y - 69;
@@ -15,27 +30,27 @@ const scrollToHowItWorks = () => {
     anim();
 };
 
+const hideOrderForm = () => {
+    setStyle(orderForm, 'opacity', 0);
+    setTimeout(() => {
+        setStyle(orderForm, 'display', 'none');
+    }, 250);
+};
+
 const showOrderForm = () => {
     setStyle(orderForm, 'display', 'flex');
     setTimeout(() => {
         setStyle(orderForm, 'opacity', 1);
     }, 1);
-};
-
-const hideOrderForm = () => {
-    classAction(orderForm, 'remove', 'modal-appear');
+    event(orderForm, 'click', (ev) => {
+        if (window.screen.width <= 768) {
+            if (ev.target.classList.contains('item-2')) hideOrderForm();
+        }
+    });
 };
 
 const showDishSelector = (type, dishList) => {
     displayDishModal(type, dishList);
-};
-
-const hideDishSelector = () => {
-
-};
-
-const setSelectedDish = (type, selectedDishes) => {
-
 };
 
 export {
@@ -43,6 +58,5 @@ export {
     showDishSelector,
     scrollToHowItWorks,
     hideOrderForm,
-    hideDishSelector,
-    setSelectedDish,
+    toggleMenu,
 };

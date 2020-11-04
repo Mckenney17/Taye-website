@@ -233,8 +233,14 @@ div.landing-page {
                                 }
                             }
 
+                            input[disabled] {
+                                color: #000;
+                            }
+
                             &:nth-last-of-type(3), &:nth-last-of-type(2) {
                                 input {
+                                    padding-right: 23px;
+                                    overflow-x: auto;
                                     max-width: 49%;
                                     &:first-child {
                                         cursor: pointer;
@@ -264,6 +270,7 @@ div.landing-page {
                                 background: red;
                                 top: 10px;
                                 opacity: 0;
+                                cursor: pointer;
                             }
                         }
 

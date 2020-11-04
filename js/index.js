@@ -12,6 +12,7 @@ import {
     scrollToHowItWorks,
     showDishSelector,
     showOrderForm,
+    toggleMenu,
 } from '../modules/appUIFuncs.js';
 import { getDishList } from '../admin/updateFood.js';
 
@@ -19,26 +20,27 @@ const {
     getStartedBtn,
     orderNowMobileBtn,
     dishSelectorBtn,
+    menuBtn,
 } = DOMElems;
 
 event(
     [
         orderNowMobileBtn,
         getStartedBtn,
+        menuBtn,
     ],
     [
-        ...repeat('click', 2),
+        ...repeat('click', 3),
     ],
     [
         showOrderForm,
         scrollToHowItWorks,
+        toggleMenu,
     ],
 );
 
 for (const btn of dishSelectorBtn) {
-    console.log(btn);
     event(btn, 'click', () => {
-        console.log('Hi');
         showDishSelector(grabFirstPart(btn.id), getDishList(grabFirstPart(btn.id)));
     });
 }

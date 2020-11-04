@@ -191,6 +191,7 @@ div.header .item-2 .nav a {
 
 div.header .item-2 .nav li:first-child > a {
   color: #4e4e4e;
+  cursor: default;
 }
 
 div.header .item-2 .nav li:first-child > a:hover {
@@ -313,11 +314,27 @@ div.header .item-3 button {
             flex-direction: column;
     height: 100%;
     margin-right: 20px;
+    -webkit-transition: all .25s linear;
+    transition: all .25s linear;
   }
   div.header .item-extra .hamburger span {
     height: 2px;
     width: 40px;
     background: #fff;
+  }
+  div.header .item-extra .hamburger.active {
+    height: auto;
+  }
+  div.header .item-extra .hamburger.active > span:nth-child(2) {
+    display: none;
+  }
+  div.header .item-extra .hamburger.active > span:first-child {
+    -webkit-transform: translateY(1px) rotate(-45deg);
+            transform: translateY(1px) rotate(-45deg);
+  }
+  div.header .item-extra .hamburger.active > span:last-child {
+    -webkit-transform: translateY(-1px) rotate(45deg);
+            transform: translateY(-1px) rotate(45deg);
   }
   div.header .item-3 {
     display: none;
@@ -607,11 +624,17 @@ div.landing-page .landing-contents .item-2 .order-form form .field input::-webki
   color: #000;
 }
 
+div.landing-page .landing-contents .item-2 .order-form form .field input[disabled], div.landing-page .landing-contents .item-2 .order-form form .field div.footer div[class|="item"] > div .review-form textarea[disabled], div.footer div[class|="item"] > div .review-form div.landing-page .landing-contents .item-2 .order-form form .field textarea[disabled] {
+  color: #000;
+}
+
 div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3), div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) {
   position: relative;
 }
 
 div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) input, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) div.footer div[class|="item"] > div .review-form textarea, div.footer div[class|="item"] > div .review-form div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) textarea, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) input, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) div.footer div[class|="item"] > div .review-form textarea, div.footer div[class|="item"] > div .review-form div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) textarea {
+  padding-right: 23px;
+  overflow-x: auto;
   max-width: 49%;
 }
 
@@ -639,6 +662,7 @@ div.landing-page .landing-contents .item-2 .order-form form .field span[id*='tri
   background: red;
   top: 10px;
   opacity: 0;
+  cursor: pointer;
 }
 
 div.landing-page .landing-contents .item-2 .order-form form .notice {
@@ -1406,7 +1430,7 @@ div.dish-list {
   max-width: 296px;
   min-width: 296px;
   background: #fff;
-  height: 80%;
+  height: 500px;
   top: 8%;
   bottom: 0;
   left: 0;

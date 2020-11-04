@@ -7,7 +7,7 @@ div.dish-list {
     max-width: 296px;
     min-width: 296px;
     background: $white;
-    height: 80%;
+    height: 500px;
     top: 8%;
     bottom: 0;
     left: 0;
@@ -17,6 +17,7 @@ div.dish-list {
     border-radius: 5px;
     box-shadow: 0 0 60px 30px rgba(#000, .3);
     overflow-y: auto;
+    
 
     .search-bar {
         position: sticky;

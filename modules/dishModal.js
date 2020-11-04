@@ -13,12 +13,17 @@ import {
     dishSelectorModal,
 } from './htmlBoilerPlate.js';
 import { implementSearch, pushToSearch } from './dishModalUIFuncs.js';
+import { getDish, setDish } from './sessionStorage.js';
+import setSelectedDish from './orderFormUIFuncs.js';
 const {
     container,
 } = DOMElems;
+const removeExistingDishModal = () => {
+    setProp(select('.dish-list'), 'outerHTML', '');
+};
 
 const dishModal = (type, dishList) => {
-    setProp(select('.dish-list'), 'outerHTML', '');
+    removeExistingDishModal();
     insertHtml(container, 'beforeend', dishSelectorModal(type));
     setStyle(select('.dish-list'), 'display', 'block');
     setTimeout(() => {
@@ -40,6 +45,34 @@ const dishModal = (type, dishList) => {
     }
 
     implementSearch(type);
+
+    const dish = getDish(type);
+    if (dish) {
+        const allDishes = [...selectAll('.dish-name')];
+        const searchInput = select(`#${type}-dish-search-input`);
+        if (Array.isArray(dish)) {
+            allDishes
+            .filter((el) => dish.map((v) => v.toLowerCase()).includes(el.textContent.toLowerCase()))
+            .map((el) => el.nextElementSibling.classList.add(`selected-${type}-dish`));
+            setProp(searchInput, 'value', dish.join(', '));
+        } else {
+            allDishes
+            .find((el) => el.textContent.toLowerCase() === dish.toLowerCase())
+            ?.nextElementSibling.classList.add(`selected-${type}-dish`);
+            setProp(searchInput, 'value', dish);
+        }
+    }
+
+    event(select(`#set-${type}-dish`), 'click', () => {
+        const dishes = select(`#${type}-dish-search-input`).value;
+        setSelectedDish(type, dishes);
+        setDish(type, dishes.includes(', ') ? dishes.split(', ') : dishes);
+        removeExistingDishModal();
+    });
+
+    event(select('.dish-list').parentElement, 'click', (ev) => {
+        if (ev.target.classList.contains('item-2')) removeExistingDishModal();
+    });
 };
 
 export default dishModal;

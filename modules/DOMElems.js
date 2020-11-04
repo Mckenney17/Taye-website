@@ -2,6 +2,8 @@ import { select, selectAll } from './DOMFuncs.js';
 
 const DOMElems = {
     container: select('.container'),
+    menuBtn: select('.hamburger'),
+    menu: select('.nav'),
     getStartedBtn: select('.get-started'),
     orderNowMobileBtn: select('#order-now-mobile'),
     orderNowLargeBtn: select('#order-now-large'),
