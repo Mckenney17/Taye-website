@@ -1,4 +1,4 @@
-div.food-list {
+div.dish-list {
     position: fixed;
     @include small-laptop-up {
         position: absolute;
@@ -50,7 +50,7 @@ div.food-list {
         }
     }
 
-    .food {
+    .dish {
         cursor: pointer;
         width: 90%;
         margin: 0 auto;
@@ -58,7 +58,7 @@ div.food-list {
         border-bottom: 2px solid #ccc;
         @include flex(space-between, center);
 
-        .food-selector {
+        .dish-selector {
             cursor: pointer;
             position: relative;
             width: 25px;
@@ -67,6 +67,8 @@ div.food-list {
             border-color: #ccc;
             margin-right: 10px;
 
+        }
+        .dish-selector.selected-main-dish, .dish-selector.selected-side-dish {
             &::after {
                 content: "";
                 position: absolute;
@@ -76,11 +78,13 @@ div.food-list {
         }
     }
 
-    &#main-dish {
-        .food-selector {
+    &#main-dish-list {
+        .dish-selector {
             border-width: 3px;
             border-radius: 50%;
 
+        }
+        .dish-selector.selected-main-dish {
             &::after {
                 top: 5px;
                 right: 5px;
@@ -91,11 +95,13 @@ div.food-list {
         }
     }
 
-    &#side-dish {
-        .food-selector {
+    &#side-dish-list {
+        .dish-selector {
             border-width: 3px;
             border-radius: 5px;
 
+        }
+        .dish-selector.selected-side-dish {
             &::after {
                 top: 3px;
                 right: 3px;
@@ -105,6 +111,8 @@ div.food-list {
             }
         }
     }
+
+    @include animate;
 }
 
 div.pop-up-page {
@@ -144,9 +152,6 @@ div.pop-up-page {
         &:nth-child(1) {
             left: slice(23px);
             top: slice(23px);
-            @include tablet {
-                
-            }
         }
         &:nth-child(2) {
             right: slice(23px);
@@ -251,5 +256,6 @@ div.pop-up-page {
             }
         }
     }
+    @include animate;
 }
 

@@ -22,6 +22,10 @@ button, input, div.footer div[class|="item"] > div .review-form textarea, textar
   border: none;
 }
 
+button, input, div.footer div[class|="item"] > div .review-form textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
 button {
   cursor: pointer;
   font-family: inherit;
@@ -183,6 +187,14 @@ div.header .item-2 .nav a {
   font-size: 11.73px;
   font-weight: 500;
   color: #fff;
+}
+
+div.header .item-2 .nav li:first-child > a {
+  color: #4e4e4e;
+}
+
+div.header .item-2 .nav li:first-child > a:hover {
+  text-decoration: none;
 }
 
 div.header .item-3 {
@@ -416,6 +428,15 @@ div.landing-page .landing-contents .item-1 div.landing-prim-content .ctas button
   color: #fff;
   -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.53);
           box-shadow: 0 3px 0 rgba(0, 0, 0, 0.53);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+div.landing-page .landing-contents .item-1 div.landing-prim-content .ctas button:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.53);
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0.53);
 }
 
 div.landing-page .landing-contents .item-1 div.landing-prim-content .ctas button:last-child {
@@ -488,21 +509,19 @@ div.landing-page .landing-contents .item-1 div.landing-prim-content .ctas button
   }
 }
 
-@media (min-width: 769px) {
-  div.landing-page .landing-contents .item-2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+div.landing-page .landing-contents .item-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@media (min-width: 769px) and (min-width: 993px) {
+@media (min-width: 993px) {
   div.landing-page .landing-contents .item-2 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -513,86 +532,131 @@ div.landing-page .landing-contents .item-1 div.landing-prim-content .ctas button
   }
 }
 
-@media (min-width: 769px) {
-  div.landing-page .landing-contents .item-2 .order-form {
-    font-family: Dosis;
-    width: 296px;
-    height: 485px;
-    margin-top: 60px;
-    background: #fff;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-            box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-    padding: 0 20px;
+@media (max-width: 768px) {
+  div.landing-page .landing-contents .item-2 {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    opacity: 0;
+    -webkit-transition: opacity .25s linear;
+    transition: opacity .25s linear;
   }
-  div.landing-page .landing-contents .item-2 .order-form .form-title {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 30px;
-    font-weight: 500;
-  }
-  div.landing-page .landing-contents .item-2 .order-form form .field {
-    width: 100%;
+  div.landing-page .landing-contents .item-2.modal-present {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
-  div.landing-page .landing-contents .item-2 .order-form form .field input, div.landing-page .landing-contents .item-2 .order-form form .field div.footer div[class|="item"] > div .review-form textarea, div.footer div[class|="item"] > div .review-form div.landing-page .landing-contents .item-2 .order-form form .field textarea {
-    width: 0;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    border: none;
-    outline: none;
-    height: 40px;
-    border-radius: 5px;
-    background: #ececec;
-    margin: 8.5px 0;
-    padding-left: 15px;
-    font-weight: 500;
+}
+
+div.landing-page .landing-contents .item-2 .order-form {
+  font-family: Dosis;
+  width: 296px;
+  height: 485px;
+  margin-top: 60px;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  padding: 20px 20px 0px;
+}
+
+@media (max-width: 768px) {
+  div.landing-page .landing-contents .item-2 .order-form {
+    -webkit-box-shadow: 0 0 60px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 60px 30px rgba(0, 0, 0, 0.3);
   }
-  div.landing-page .landing-contents .item-2 .order-form form .field input::-webkit-input-placeholder, div.landing-page .landing-contents .item-2 .order-form form .field div.footer div[class|="item"] > div .review-form textarea::-webkit-input-placeholder, div.footer div[class|="item"] > div .review-form div.landing-page .landing-contents .item-2 .order-form form .field textarea::-webkit-input-placeholder {
-    color: #000;
-  }
-  div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3), div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) {
-    position: relative;
-  }
-  div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) input, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) div.footer div[class|="item"] > div .review-form textarea, div.footer div[class|="item"] > div .review-form div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) textarea, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) input, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) div.footer div[class|="item"] > div .review-form textarea, div.footer div[class|="item"] > div .review-form div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) textarea {
-    max-width: 49%;
-  }
-  div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) input:first-child, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) div.footer div[class|="item"] > div .review-form textarea:first-child, div.footer div[class|="item"] > div .review-form div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) textarea:first-child, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) input:first-child, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) div.footer div[class|="item"] > div .review-form textarea:first-child, div.footer div[class|="item"] > div .review-form div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) textarea:first-child {
-    cursor: pointer;
-  }
-  div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3)::after, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2)::after {
-    position: absolute;
-    content: '';
-    top: 40%;
-    bottom: 0;
-    left: 38%;
-    right: 0;
-    margin: auto auto;
-    background: url(../img/dropdown.png) no-repeat;
-    background-size: auto;
-  }
-  div.landing-page .landing-contents .item-2 .order-form form .notice {
-    font-size: 12px;
-    text-align: center;
-    line-height: 4px;
-    color: silver;
-    font-weight: 100;
-  }
-  div.landing-page .landing-contents .item-2 .order-form form button {
-    width: 100%;
-    background: #1f7fd6;
-    height: 50px;
-    margin-top: 17px;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: 500;
-  }
+}
+
+div.landing-page .landing-contents .item-2 .order-form .form-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+div.landing-page .landing-contents .item-2 .order-form form .field {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.landing-page .landing-contents .item-2 .order-form form .field input, div.landing-page .landing-contents .item-2 .order-form form .field div.footer div[class|="item"] > div .review-form textarea, div.footer div[class|="item"] > div .review-form div.landing-page .landing-contents .item-2 .order-form form .field textarea {
+  width: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+  outline: none;
+  height: 40px;
+  border-radius: 5px;
+  background: #ececec;
+  margin: 8.5px 0;
+  padding-left: 15px;
+  font-weight: 500;
+}
+
+div.landing-page .landing-contents .item-2 .order-form form .field input::-webkit-input-placeholder, div.landing-page .landing-contents .item-2 .order-form form .field div.footer div[class|="item"] > div .review-form textarea::-webkit-input-placeholder, div.footer div[class|="item"] > div .review-form div.landing-page .landing-contents .item-2 .order-form form .field textarea::-webkit-input-placeholder {
+  color: #000;
+}
+
+div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3), div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) {
+  position: relative;
+}
+
+div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) input, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) div.footer div[class|="item"] > div .review-form textarea, div.footer div[class|="item"] > div .review-form div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) textarea, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) input, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) div.footer div[class|="item"] > div .review-form textarea, div.footer div[class|="item"] > div .review-form div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) textarea {
+  max-width: 49%;
+}
+
+div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) input:first-child, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) div.footer div[class|="item"] > div .review-form textarea:first-child, div.footer div[class|="item"] > div .review-form div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3) textarea:first-child, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) input:first-child, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) div.footer div[class|="item"] > div .review-form textarea:first-child, div.footer div[class|="item"] > div .review-form div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2) textarea:first-child {
+  cursor: pointer;
+}
+
+div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(3)::after, div.landing-page .landing-contents .item-2 .order-form form .field:nth-last-of-type(2)::after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  top: 40%;
+  bottom: 0;
+  left: -15%;
+  right: 0;
+  margin: auto auto;
+  background: url(../img/dropdown.png) no-repeat;
+  background-size: auto;
+}
+
+div.landing-page .landing-contents .item-2 .order-form form .field span[id*='trigger'] {
+  position: absolute;
+  width: 125px;
+  height: 39px;
+  background: red;
+  top: 10px;
+  opacity: 0;
+}
+
+div.landing-page .landing-contents .item-2 .order-form form .notice {
+  font-size: 12px;
+  text-align: center;
+  line-height: 4px;
+  color: silver;
+  font-weight: 100;
+}
+
+div.landing-page .landing-contents .item-2 .order-form form button {
+  width: 100%;
+  background: #1f7fd6;
+  height: 50px;
+  margin-top: 17px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
 }
 
 div.how-it-works-section {
@@ -1336,7 +1400,7 @@ div.footer div[class|="item"] .review-service i:last-child::before {
   }
 }
 
-div.food-list {
+div.dish-list {
   position: fixed;
   width: 100%;
   max-width: 296px;
@@ -1353,15 +1417,19 @@ div.food-list {
   -webkit-box-shadow: 0 0 60px 30px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 60px 30px rgba(0, 0, 0, 0.3);
   overflow-y: auto;
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity .25s linear;
+  transition: opacity .25s linear;
 }
 
 @media (min-width: 769px) {
-  div.food-list {
+  div.dish-list {
     position: absolute;
   }
 }
 
-div.food-list .search-bar {
+div.dish-list .search-bar {
   position: -webkit-sticky;
   position: sticky;
   z-index: 3;
@@ -1378,7 +1446,7 @@ div.food-list .search-bar {
           justify-content: space-between;
 }
 
-div.food-list .search-bar input, div.food-list .search-bar div.footer div[class|="item"] > div .review-form textarea, div.footer div[class|="item"] > div .review-form div.food-list .search-bar textarea {
+div.dish-list .search-bar input, div.dish-list .search-bar div.footer div[class|="item"] > div .review-form textarea, div.footer div[class|="item"] > div .review-form div.dish-list .search-bar textarea {
   width: 78%;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -1386,11 +1454,11 @@ div.food-list .search-bar input, div.food-list .search-bar div.footer div[class|
   font-size: 21px;
 }
 
-div.food-list .search-bar input::-webkit-input-placeholder, div.food-list .search-bar div.footer div[class|="item"] > div .review-form textarea::-webkit-input-placeholder, div.footer div[class|="item"] > div .review-form div.food-list .search-bar textarea::-webkit-input-placeholder {
+div.dish-list .search-bar input::-webkit-input-placeholder, div.dish-list .search-bar div.footer div[class|="item"] > div .review-form textarea::-webkit-input-placeholder, div.footer div[class|="item"] > div .review-form div.dish-list .search-bar textarea::-webkit-input-placeholder {
   color: #ccc;
 }
 
-div.food-list .search-bar button {
+div.dish-list .search-bar button {
   width: 20%;
   border-radius: 5px;
   background: #1f7fd6;
@@ -1399,7 +1467,7 @@ div.food-list .search-bar button {
   line-height: 15px;
 }
 
-div.food-list .food {
+div.dish-list .dish {
   cursor: pointer;
   width: 90%;
   margin: 0 auto;
@@ -1416,7 +1484,7 @@ div.food-list .food {
           align-items: center;
 }
 
-div.food-list .food .food-selector {
+div.dish-list .dish .dish-selector {
   cursor: pointer;
   position: relative;
   width: 25px;
@@ -1426,19 +1494,19 @@ div.food-list .food .food-selector {
   margin-right: 10px;
 }
 
-div.food-list .food .food-selector::after {
+div.dish-list .dish .dish-selector.selected-main-dish::after, div.dish-list .dish .dish-selector.selected-side-dish::after {
   content: "";
   position: absolute;
   margin: auto;
   background: #1f7fd6;
 }
 
-div.food-list#main-dish .food-selector {
+div.dish-list#main-dish-list .dish-selector {
   border-width: 3px;
   border-radius: 50%;
 }
 
-div.food-list#main-dish .food-selector::after {
+div.dish-list#main-dish-list .dish-selector.selected-main-dish::after {
   top: 5px;
   right: 5px;
   bottom: 5px;
@@ -1446,17 +1514,23 @@ div.food-list#main-dish .food-selector::after {
   border-radius: 50%;
 }
 
-div.food-list#side-dish .food-selector {
+div.dish-list#side-dish-list .dish-selector {
   border-width: 3px;
   border-radius: 5px;
 }
 
-div.food-list#side-dish .food-selector::after {
+div.dish-list#side-dish-list .dish-selector.selected-side-dish::after {
   top: 3px;
   right: 3px;
   bottom: 3px;
   left: 3px;
   border-radius: 2.5px;
+}
+
+div.dish-list.modal-present {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 div.pop-up-page {
@@ -1488,6 +1562,10 @@ div.pop-up-page {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity .25s linear;
+  transition: opacity .25s linear;
 }
 
 @media (min-width: 769px) {
@@ -1666,5 +1744,11 @@ div.pop-up-page .image-cont + p + p + a + p {
   div.pop-up-page .image-cont + p + p + a + p {
     font-size: 2.5vw;
   }
+}
+
+div.pop-up-page.modal-present {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

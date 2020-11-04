@@ -58,6 +58,12 @@ div.header {
                 }
                 color: $white;
             }
+            li:first-child > a {
+                color: rgb(78, 78, 78);
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
     }
 

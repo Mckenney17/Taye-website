@@ -81,6 +81,12 @@ div.landing-page {
                         background: $prim;
                         color: $white;
                         box-shadow: 0 3px 0 rgba(#000, 0.53);
+                        transition: all .2s ease;
+
+                        &:active {
+                            transform: translateY(3px);
+                            box-shadow: 0 0 0 rgba(#000, 0.53);
+                        }
                 
                         &:last-child {
                             display: none;
@@ -163,14 +169,25 @@ div.landing-page {
             }
         }
 
-        @include small-laptop-up {
+        // @include small-laptop-up {
             .item-2 {
                 // background: brown;
                 @include flex(center, center);
                 @include big-screen {
                     @include flex(flex-start);
                 }
+                
 
+                @include tablet {
+                    position: fixed;
+                    margin: auto;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    @include animate;
+
+                }
                 .order-form {
                     font-family: Dosis;
                     width: 296px;
@@ -179,21 +196,22 @@ div.landing-page {
                     background: $white;
                     border-radius: 5px;
                     box-shadow: 0 0 4px rgba(#000, .3);
-                    padding: 0 20px;
+                    @include tablet {
+                        box-shadow: 0 0 60px 30px rgba(#000, .3);
+                    }
+                    padding: 20px 20px 0px;
 
                     .form-title {
                         text-align: center;
-                        margin-top: 20px;
                         font: {
                             size: 30px;
-                            // come here
-                            weight: 500;
+                            weight: weight(medium);
                         }
-                        // font-family: Dosis;
                     }
 
                     form {
                         .field {
+                            position: relative;
                             width: 100%;
 
                             @include flex(space-between);
@@ -206,7 +224,6 @@ div.landing-page {
                                 height: 40px;
                                 border-radius: 5px;
                                 background: #ececec;
-                                // font-family: Dosis;
                                 margin: 8.5px 0;
 
                                 padding-left: 15px;
@@ -229,9 +246,10 @@ div.landing-page {
                                 &::after {
                                     position: absolute;
                                     content: '';
+                                    width: 20px;
                                     top: 40%;
                                     bottom: 0;
-                                    left: 38%;
+                                    left: -15%;
                                     right: 0;
                                     margin: auto auto;
                                     background: url(../img/dropdown.png) no-repeat;
@@ -239,6 +257,14 @@ div.landing-page {
                                 }
                             }
 
+                            span[id*='trigger'] {
+                                position: absolute;
+                                width: 125px;
+                                height: 39px;
+                                background: red;
+                                top: 10px;
+                                opacity: 0;
+                            }
                         }
 
                         .notice {
@@ -261,6 +287,6 @@ div.landing-page {
                     }
                 }
             }
-        }
+        // }
     }
 }

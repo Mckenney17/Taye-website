@@ -76,3 +76,13 @@ $ills-map: (
         @content;
     }
 }
+
+@mixin animate {
+    display: none;
+    opacity: 0;
+    transition: opacity .25s linear;
+
+    &.modal-present {
+        display: flex;
+    }
+}

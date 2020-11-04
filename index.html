@@ -31,7 +31,7 @@
                 </ul>
             </div>
             <div class="item-3">
-                <button class="order-now-btn">ORDER NOW</button>
+                <button class="order-now-btn" id='order-now-large'>ORDER NOW</button>
             </div>
         </div>
         <div class='landing-page'>
@@ -43,7 +43,7 @@
                                     src="./img/pointer.png" alt=""> </p>
                             <div class="ctas">
                                 <button class='get-started'>GET STARTED</button>
-                                <button class='order-now-btn'>ORDER NOW</button>
+                                <button class='order-now-btn'id="order-now-mobile">ORDER NOW</button>
                             </div>
                     </div>
                 </div>
@@ -65,12 +65,14 @@
                                 <input type="text" name='fulladdress' id='fulladdress' placeholder="Full Address">
                             </div>
                             <div class="field">
-                                <input disabled type="text" name='food' id='food' placeholder="Food">
-                                <input type="text" name='food-amount' id='food-amount' placeholder="Amount">
+                                <input disabled type="text" name='main-dish' id='main-dish' placeholder="Main Dish">
+                                <input type="text" name='main-dish-amount' id='main-dish-amount' placeholder="Amount">
+                                <span id="main-dish-modal-trigger"></span>
                             </div>
                             <div class="field">
-                                <input disabled type="text" name='addon' id='addon' placeholder="Add-On">
-                                <input type="text" name='addon-amount' id='addon-amount' placeholder="Amount">
+                                <input disabled type="text" name='side-dish' id='side-dish' placeholder="Side Dish">
+                                <input type="text" name='side-dish-amount' id='side-dish-amount' placeholder="Amount">
+                                <span id="side-dish-modal-trigger"></span>
                             </div>
                             <div class="notice">Food + Add-On must 500 Naira in Total</div>
                             <button type="submit">PLACE YOUR ORDER</button>
@@ -199,52 +201,11 @@
                 <!-- <div class="item-3"></div> -->
             </div>
         </div>
-        <div style="display: none;" class="food-list" id="main-dish">
-            <div class="search-bar">
-                <input type="text" placeholder="Main Dish">
-                <button id='set-food'>SET</button>
-            </div>
-            <div class="food">
-                <p class="food-name" id='eba'>Eba</p>
-                <span class='food-selector' id='eba-select'></span>
-            </div>
-            <div class="food">
-                <p class="food-name" id='iyan'>Iyan</p>
-                <span class='food-selector' id='iyan-select'></span>
-            </div>
-            <div class="food">
-                <p class="food-name" id='fufu'>Fufu</p>
-                <span class='food-selector' id='fufu-select'></span>
-            </div>
-            <div class="food">
-                <p class="food-name" id='rice'>Rice</p>
-                <span class='food-selector' id='rice-select'></span>
-            </div>
-            <div class="food">
-                <p class="food-name" id='beans'>Beans</p>
-                <span class='food-selector' id='beans-select'></span>
-            </div>
-            <div class="food">
-                <p class="food-name" id='asaro'>Asaro</p>
-                <span class='food-selector' id='asaro-select'></span>
-            </div>
-        </div>
+        <!-- Dish selector modal -->
 
         <!-- Pop Up Page -->
-        <div class="pop-up-page">
-            <span class="screw"></span>
-            <span class="screw"></span>
-            <span class="screw"></span>
-            <span class="screw"></span>
-
-            <img src="./img/logo.png" alt="">
-            <div class="image-cont"></div>
-            <p>Thank <span>You</span></p>
-            <p>Complete your Order via <span>WhatsApp Chat</span></p>
-            <a href="">Click to Continue</a>
-            <p>Your <span>Order ID</span>: 235a73b36c2574</p>
-        </div>
+        
     </div>
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
 </body>
 </html>
