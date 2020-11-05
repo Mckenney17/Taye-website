@@ -15,6 +15,7 @@ import {
     toggleMenu,
 } from '../modules/appUIFuncs.js';
 import { getDishList } from '../admin/updateFood.js';
+import implementTestimonials from '../modules/testimonial.js';
 
 const {
     getStartedBtn,
@@ -44,3 +45,5 @@ for (const btn of dishSelectorBtn) {
         showDishSelector(grabFirstPart(btn.id), getDishList(grabFirstPart(btn.id)));
     });
 }
+
+implementTestimonials();

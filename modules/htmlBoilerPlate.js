@@ -32,8 +32,32 @@ const thankYouModal = (orderID, referLink) => `
     </div>
 `;
 
+const testimonyCont = (count) => `
+    <div class="testimonial swiper-slide" id="testimonial-${count}">
+        
+    </div>
+`;
+
+const testimonyBody = ({ testimonyContent, testifierName, testifierImg }) => `
+    <div class="testimony">
+        <span>“</span>
+        <p class="testimony-content">${testimonyContent}
+            <span class='test-info'>
+                <span style="background-image: url(${testifierImg});" class='test-pic'></span>
+                <span class='test-name'>${testifierName}</span>
+                <span class='test-star' id="${testifierName}-test-star">
+                    
+                </span>
+            </span>
+        </p>
+    </div>
+`;
+
+
 export {
     dishSelectorModal,
     dishItem,
     thankYouModal,
+    testimonyCont,
+    testimonyBody,
 };

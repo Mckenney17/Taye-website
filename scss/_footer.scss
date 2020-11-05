@@ -81,6 +81,11 @@ div.footer {
                     border-radius: 5px;
                     font-size: 16px;
                     padding-left: 10px;
+
+                    &:nth-child(2) {
+                        color: #fff;
+                        margin-top: 5px;
+                    }
                 }
                 textarea {
                     @extend input;

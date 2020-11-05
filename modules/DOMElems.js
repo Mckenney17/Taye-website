@@ -17,6 +17,7 @@ const DOMElems = {
     placeOrderBtn: select('.order-form button[type="submit"]'),
     howItWorksSection: select('.how-it-works-section'),
     dishSelectorBtn: selectAll('.field span[id*=trigger]'),
+    testimonialsCont: select('.testimonials-cont'),
 };
 
 export default DOMElems;

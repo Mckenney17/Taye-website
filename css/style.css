@@ -1112,7 +1112,7 @@ div.testimonials-section .testimonials-cont .testimony .testimony-content {
   }
 }
 
-div.testimonials-section .testimonials-cont .testimony .testimony-content #test-info {
+div.testimonials-section .testimonials-cont .testimony .testimony-content .test-info {
   font-size: 14px;
   color: #1f7fd6;
   font-weight: 500;
@@ -1125,39 +1125,36 @@ div.testimonials-section .testimonials-cont .testimony .testimony-content #test-
   margin-top: 10px;
 }
 
-div.testimonials-section .testimonials-cont .testimony .testimony-content #test-info #test-pic {
+div.testimonials-section .testimonials-cont .testimony .testimony-content .test-info .test-pic {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   padding: 2px;
   border: 2px solid #1f7fd6;
-  background: url(../img/testifier.png) no-repeat center 0/contain content-box content-box;
+  background-image: url(../img/testifier.png);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: contain;
+  background-origin: content-box;
+  background-clip: content-box;
 }
 
-div.testimonials-section .testimonials-cont .testimony .testimony-content #test-info #test-star {
+div.testimonials-section .testimonials-cont .testimony .testimony-content .test-info .test-star {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-div.testimonials-section .testimonials-cont .testimony .testimony-content #test-info #test-name {
+div.testimonials-section .testimonials-cont .testimony .testimony-content .test-info .test-name {
   margin: 0 5px;
 }
 
-div.testimonials-section .testimonials-cont .testimony .testimony-content #test-info i {
-  font-style: normal;
-}
-
-div.testimonials-section .testimonials-cont .testimony .testimony-content #test-info i::before {
+div.testimonials-section .testimonials-cont .testimony .testimony-content .test-info i.fas {
   color: #1f7fd6;
-  font-family: 'Font Awesome 5 Free Solid';
-  content: "\f005";
 }
 
-div.testimonials-section .testimonials-cont .testimony .testimony-content #test-info i:last-child::before {
+div.testimonials-section .testimonials-cont .testimony .testimony-content .test-info i.far {
   color: #ccc;
-  font-family: 'Font Awesome 5 Free Regular';
-  content: "\f005";
 }
 
 div.testimonials-section .caro-nav {
@@ -1315,6 +1312,11 @@ div.footer div[class|="item"] > div .review-form input, div.footer div[class|="i
   border-radius: 5px;
   font-size: 16px;
   padding-left: 10px;
+}
+
+div.footer div[class|="item"] > div .review-form input:nth-child(2), div.footer div[class|="item"] > div .review-form textarea:nth-child(2) {
+  color: #fff;
+  margin-top: 5px;
 }
 
 div.footer div[class|="item"] > div .review-form textarea {
