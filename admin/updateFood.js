@@ -12,13 +12,6 @@ const sideDishes = [
     'dodo',
 ];
 
-const testimonies = [
-
-];
-
 const getDishList = (type) => (type === 'main' ? [...new Set(mainDishes)] : [...new Set(sideDishes)]);
 
-export {
-    getDishList,
-    testimonies,
-};
+export default getDishList;

@@ -1099,7 +1099,6 @@ div.testimonials-section .testimonials-cont .testimony > span {
 
 div.testimonials-section .testimonials-cont .testimony .testimony-content {
   color: #333;
-  border-right: 1px dashed #1f7fd6;
   padding-right: 5px;
   font-size: 17px;
   font-weight: 300;
@@ -1131,7 +1130,6 @@ div.testimonials-section .testimonials-cont .testimony .testimony-content .test-
   border-radius: 50%;
   padding: 2px;
   border: 2px solid #1f7fd6;
-  background-image: url(../img/testifier.png);
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: contain;
@@ -1159,23 +1157,24 @@ div.testimonials-section .testimonials-cont .testimony .testimony-content .test-
 
 div.testimonials-section .caro-nav {
   margin: 4% 0;
-  width: 30px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 div.testimonials-section .caro-nav span {
   width: 6px;
   height: 6px;
+  margin: 0 2px;
   background: #505050;
   border-radius: 50%;
 }
 
-div.testimonials-section .caro-nav span:first-child {
+div.testimonials-section .caro-nav span.active {
   background: #1f7fd6;
 }
 
@@ -1362,23 +1361,8 @@ div.footer div[class|="item"] > div .review-form .form-bottom a i:hover {
   color: #1f7fd6;
 }
 
-div.footer div[class|="item"] > div .review-form .form-bottom a:nth-child(1) > i::before {
-  font-family: 'Font Awesome 5 Brands Regular';
-  content: "\f09a";
-}
-
 div.footer div[class|="item"] > div .review-form .form-bottom a:nth-child(2) > i {
   margin: 0 3px;
-}
-
-div.footer div[class|="item"] > div .review-form .form-bottom a:nth-child(2) > i::before {
-  font-family: 'Font Awesome 5 Brands Regular';
-  content: "\f16d";
-}
-
-div.footer div[class|="item"] > div .review-form .form-bottom a:nth-child(3) > i::before {
-  font-family: 'Font Awesome 5 Brands Regular';
-  content: "\f1a0";
 }
 
 div.footer div[class|="item"] .copyright {
@@ -1394,22 +1378,12 @@ div.footer div[class|="item"] .review-service > p > span {
 }
 
 div.footer div[class|="item"] .review-service i {
-  font-style: normal;
-  color: #1f7fd6;
-}
-
-div.footer div[class|="item"] .review-service i::before {
-  font-family: 'Font Awesome 5 Free Regular';
-  content: "\f005";
-}
-
-div.footer div[class|="item"] .review-service i:last-child {
   color: #ccc;
+  cursor: pointer;
 }
 
-div.footer div[class|="item"] .review-service i:last-child::before {
-  font-family: 'Font Awesome 5 Free Regular';
-  content: "\f005";
+div.footer div[class|="item"] .review-service i.picked {
+  color: #1f7fd6;
 }
 
 @media (max-width: 576px) {

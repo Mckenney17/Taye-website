@@ -18,6 +18,9 @@ const DOMElems = {
     howItWorksSection: select('.how-it-works-section'),
     dishSelectorBtn: selectAll('.field span[id*=trigger]'),
     testimonialsCont: select('.testimonials-cont'),
+    sliderIndicator: select('.caro-nav'),
+    starRating: selectAll('.review-service i'),
+    starRatingInputValue: select('input#star-rating'),
 };
 
 export default DOMElems;

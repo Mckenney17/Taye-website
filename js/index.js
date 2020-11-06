@@ -14,8 +14,9 @@ import {
     showOrderForm,
     toggleMenu,
 } from '../modules/appUIFuncs.js';
-import { getDishList } from '../admin/updateFood.js';
+import getDishList from '../admin/updateFood.js';
 import implementTestimonials from '../modules/testimonial.js';
+import implementStarRating from '../modules/implementStarRating.js';
 
 const {
     getStartedBtn,
@@ -47,3 +48,5 @@ for (const btn of dishSelectorBtn) {
 }
 
 implementTestimonials();
+
+implementStarRating();

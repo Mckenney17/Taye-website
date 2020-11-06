@@ -10,7 +10,6 @@ const {
     howItWorksSection,
     menuBtn,
     menu,
-    container,
 } = DOMElems;
 
 const toggleMenu = () => {

@@ -116,24 +116,8 @@ div.footer {
                                 color: $prim;
                             }
                         }
-                        &:nth-child(1) > i {
-                            &::before {
-                                font-family: 'Font Awesome 5 Brands Regular';
-                                content: "\f09a";
-                            }
-                        }
                         &:nth-child(2) > i {
-                            &::before {
-                                font-family: 'Font Awesome 5 Brands Regular';
-                                content: "\f16d";
-                            }
                             margin: 0 3px;
-                        }
-                        &:nth-child(3) > i {
-                            &::before {
-                                font-family: 'Font Awesome 5 Brands Regular';
-                                content: "\f1a0";
-                            }
                         }
                     }
                 }
@@ -155,19 +139,11 @@ div.footer {
                 margin-right: 10px;
             }
             i {
-                font-style: normal;
+                color: #ccc;
+                cursor: pointer;
+            }
+            i.picked {
                 color: $prim;
-                &::before {
-                    font-family: 'Font Awesome 5 Free Regular';
-                    content: "\f005";
-                }
-                &:last-child {
-                    color: #ccc;
-                    &::before {
-                        font-family: 'Font Awesome 5 Free Regular';
-                        content: "\f005";
-                    }
-                }
             }
         }
     }

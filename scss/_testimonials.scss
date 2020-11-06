@@ -88,7 +88,6 @@ div.testimonials-section {
             }
             .testimony-content {
                 color: $grey;
-                border-right: 1px dashed $prim;
                 padding-right: 5px;
                 font-size: 17px;
                 font-weight: weight(light);
@@ -111,7 +110,7 @@ div.testimonials-section {
                         border-radius: 50%;
                         padding: 2px;
                         border: 2px solid $prim;
-                        background-image: url(../img/testifier.png);
+                        // background-image: url(../img/testifier.png);
                         background-repeat: no-repeat;
                         background-position: center 0;
                         background-size: contain;
@@ -138,18 +137,18 @@ div.testimonials-section {
 
     .caro-nav {
         margin: 4% 0;
-        width: 30px;
-        @include flex(space-evenly);
+        width: 100%;
+        @include flex(center);
 
         span {
             width: 6px;
             height: 6px;
+            margin: 0 2px;
             background: #505050;
             border-radius: 50%;
-
-            &:first-child {
-                background: $prim;
-            }
         }           
+        span.active {
+            background: $prim;
+        }
     }
 }

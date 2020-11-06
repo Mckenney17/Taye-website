@@ -1,4 +1,6 @@
-import { capitalize } from './appEngineFuncs.js';
+import {
+    capitalize,
+} from './appEngineFuncs.js';
 
 const dishSelectorModal = (dishType) => `
     <div class="dish-list" id="${dishType}-dish-list">
@@ -38,14 +40,19 @@ const testimonyCont = (count) => `
     </div>
 `;
 
-const testimonyBody = ({ testimonyContent, testifierName, testifierImg }) => `
+const testimonyBody = ({
+    testifierId,
+    testimonyContent,
+    testifierName,
+    testifierImg,
+}) => `
     <div class="testimony">
         <span>“</span>
         <p class="testimony-content">${testimonyContent}
             <span class='test-info'>
                 <span style="background-image: url(${testifierImg});" class='test-pic'></span>
                 <span class='test-name'>${testifierName}</span>
-                <span class='test-star' id="${testifierName}-test-star">
+                <span class='test-star' id="test-star-testifier-${testifierId}">
                     
                 </span>
             </span>
