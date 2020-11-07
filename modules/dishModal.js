@@ -32,13 +32,14 @@ const dishModal = (type, dishList) => {
 
     for (const dishName of dishList) {
         insertHtml(select(`#${type}-dish-list`), 'beforeend', dishItem(dishName));
-        event(select(`#${dishName}-dish-div`), 'click', () => {
+        const asId = dishName.split(/\W+/gu).join('');
+        event(select(`#${asId}-dish-div`), 'click', () => {
             if (type === 'main') {
                 [...selectAll('.dish-selector')].map((sel) => classAction(sel, 'remove', `selected-${type}-dish`));
-                classAction(select(`#${dishName}-select`), 'add', `selected-${type}-dish`);
+                classAction(select(`#${asId}-select`), 'add', `selected-${type}-dish`);
                 pushToSearch(select(`.selected-${type}-dish`).previousElementSibling.textContent, type);
             } else {
-                classAction(select(`#${dishName}-select`), 'toggle', `selected-${type}-dish`);
+                classAction(select(`#${asId}-select`), 'toggle', `selected-${type}-dish`);
                 pushToSearch([...selectAll(`.selected-${type}-dish`)].map((el) => el.previousElementSibling.textContent), type);
             }
         });

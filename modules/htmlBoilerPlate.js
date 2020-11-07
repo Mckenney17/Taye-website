@@ -10,15 +10,22 @@ const dishSelectorModal = (dishType) => `
         </div>
     </div>
 `;
-
-const dishItem = (dishName) => `
-    <div class="dish" id="${dishName}-dish-div">
-        <p class="dish-name" id='${dishName}'>${capitalize(dishName)}</p>
-        <span class='dish-selector' id='${dishName}-select'></span>
+const dishItem = (dishName) => {
+    const asId = dishName.split(/\W+/gu).join('');
+    return `<div class="dish" id="${asId}-dish-div">
+        <p class="dish-name" id='${asId}'>${capitalize(dishName)}</p>
+        <span class='dish-selector' id='${asId}-select'></span>
     </div>
 `;
+};
 
-const thankYouModal = ({ orderID, message }) => `
+const thankYouModal = ({
+    orderID,
+    message,
+    orderPrice,
+    deliveryPrice,
+    totalPrice,
+}) => `
     <div class="pop-up-page">
         <span class="screw"></span>
         <span class="screw"></span>
@@ -29,6 +36,7 @@ const thankYouModal = ({ orderID, message }) => `
         <div class="image-cont"></div>
         <p>Thank <span>You</span></p>
         <p>Complete your Order via <span>WhatsApp Chat</span></p>
+        <p>Order Price: <span>${orderPrice}</span>, Delivery Price: <span>${deliveryPrice}</span><br>Total Price: <span>${totalPrice} Naira</span></p>
         <a href="https://api.whatsapp.com/send?phone=2348130768048&text=${message}">Click to Continue</a>
         <p>Your <span>Order ID</span>: ${orderID}</p>
     </div>

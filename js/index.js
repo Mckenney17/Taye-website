@@ -24,8 +24,9 @@ const {
     orderNowMobileBtn,
     dishSelectorBtn,
     menuBtn,
-    // orderFormActual,
-    placeOrderBtn,
+    orderNowLargeBtn,
+    orderNowMiddleBtn,
+    orderFormActual,
 } = DOMElems;
 
 event(
@@ -33,18 +34,28 @@ event(
         orderNowMobileBtn,
         getStartedBtn,
         menuBtn,
-        // orderFormActual,
-        placeOrderBtn,
+        orderNowLargeBtn,
+        orderNowMiddleBtn,
+        orderFormActual,
     ],
     [
-        ...repeat('click', 4),
-        // 'submit',
+        ...repeat('click', 5),
+        'submit',
     ],
     [
         showOrderForm,
         scrollToHowItWorks,
         toggleMenu,
-        thankUser,
+        ...repeat(
+            () => {
+                document.body.scrollTo(0, 0);
+            },
+            2,
+        ),
+        (ev) => {
+            ev.preventDefault();
+            thankUser();
+        },
     ],
 );
 

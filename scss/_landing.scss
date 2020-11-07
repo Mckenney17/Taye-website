@@ -205,7 +205,7 @@ div.landing-page {
                         text-align: center;
                         font: {
                             size: 30px;
-                            weight: weight(medium);
+                            weight: weight(bold);
                         }
                     }
 
@@ -222,12 +222,13 @@ div.landing-page {
                                 border: none;
                                 outline: none;
                                 height: 40px;
+                                font-family: inherit;
                                 border-radius: 5px;
                                 background: #ececec;
                                 margin: 8.5px 0;
 
                                 padding-left: 15px;
-                                font-weight: 500;
+                                font-weight: weight(semibold);
                                 &::-webkit-input-placeholder {
                                     color: #000;
                                 }
@@ -279,7 +280,7 @@ div.landing-page {
                             text-align: center;
                             line-height: 4px;
                             color: silver;
-                            font-weight: 100;
+                            font-weight: weight(semibold);
                         }
                         button {
                             // font-family: Dosis;
@@ -289,7 +290,7 @@ div.landing-page {
                             margin-top: 17px;
                             border-radius: 5px;
                             color: $white;
-                            font-weight: 500;
+                            font-weight: weight(semibold);
                         }
                     }
                 }

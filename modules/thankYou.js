@@ -22,11 +22,15 @@ const {
 } = DOMElems;
 
 const thankUser = () => {
+    const { mainDishAmount, sideDishAmount } = getOrderInputs();
     const orderID = generateOrderID(getOrderInputs());
     const message = escape(structureWhatsAppMessage(getOrderInputs()).trim());
     insertHtml(container, 'beforeend', thankYouModal({
         orderID,
         message,
+        orderPrice: Number(mainDishAmount) + Number(sideDishAmount),
+        deliveryPrice: 300,
+        totalPrice: Number(mainDishAmount) + Number(sideDishAmount) + 300,
     }));
     setStyle(select('.pop-up-page'), 'display', 'flex');
     setTimeout(() => {

@@ -24,6 +24,7 @@ div.dish-list {
         z-index: 3;
         top: 10px;
         width: 90%;
+        // padding-top: 10px;
         margin: 10px auto;
         background: $white;
         height: 45px;
@@ -225,36 +226,58 @@ div.pop-up-page {
                 }
                 font-weight: weight(medium);
 
-                & + a {
-                    font-size: 1.5vw;
+                & + p {
+                    margin-top: 5px;
+                    font-size: 1vw;
+                    line-height: 1vw;
                     @include small-laptop {
-                        font-size: 2vw;
+                        font-size: 1.15vw;
+                        line-height: 1.15vw;
                     }
                     @include tablet {
-                        font-size: 2.5vw;
+                        font-size: 1.8vw;
+                        line-height: 1.8vw;
                     }
                     @include mobile {
-                        font-size: 4vw;
+                        font-size: 2.7vw;
+                        line-height: 2.7vw;
                     }
-                    // line-height: 25px;
-                    color: $prim;
-                    text-decoration: underline;
-
-                    & + p {
-                        font-size: 1.05vw;
+                    font-weight: weight(medium);
+                    text-align: center;
+                    
+                    & + a {
+                        font-size: 1.5vw;
                         @include small-laptop {
-                            font-size: 1.20vw;
+                            font-size: 2vw;
                         }
                         @include tablet {
-                            font-size: 1.6vw;
-                        }
-                        @include mobile {
                             font-size: 2.5vw;
                         }
-                        font-weight: weight(medium);
+                        @include mobile {
+                            font-size: 4vw;
+                        }
+                        // line-height: 25px;
+                        color: $prim;
+                        text-decoration: underline;
+    
+                        & + p {
+                            font-size: 1.05vw;
+                            @include small-laptop {
+                                font-size: 1.20vw;
+                            }
+                            @include tablet {
+                                font-size: 1.6vw;
+                            }
+                            @include mobile {
+                                font-size: 2.5vw;
+                            }
+                            font-weight: weight(medium);
+                        }
                     }
                 }
+
             }
+
         }
     }
     @include animate;

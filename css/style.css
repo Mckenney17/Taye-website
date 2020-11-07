@@ -591,7 +591,7 @@ div.landing-page .landing-contents .item-2 .order-form {
 div.landing-page .landing-contents .item-2 .order-form .form-title {
   text-align: center;
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 div.landing-page .landing-contents .item-2 .order-form form .field {
@@ -613,11 +613,12 @@ div.landing-page .landing-contents .item-2 .order-form form .field input, div.la
   border: none;
   outline: none;
   height: 40px;
+  font-family: inherit;
   border-radius: 5px;
   background: #ececec;
   margin: 8.5px 0;
   padding-left: 15px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 div.landing-page .landing-contents .item-2 .order-form form .field input::-webkit-input-placeholder, div.landing-page .landing-contents .item-2 .order-form form .field div.footer div[class|="item"] > div .review-form textarea::-webkit-input-placeholder, div.footer div[class|="item"] > div .review-form div.landing-page .landing-contents .item-2 .order-form form .field textarea::-webkit-input-placeholder {
@@ -670,7 +671,7 @@ div.landing-page .landing-contents .item-2 .order-form form .notice {
   text-align: center;
   line-height: 4px;
   color: silver;
-  font-weight: 100;
+  font-weight: 600;
 }
 
 div.landing-page .landing-contents .item-2 .order-form form button {
@@ -680,7 +681,7 @@ div.landing-page .landing-contents .item-2 .order-form form button {
   margin-top: 17px;
   border-radius: 5px;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 div.how-it-works-section {
@@ -1132,7 +1133,7 @@ div.testimonials-section .testimonials-cont .testimony .testimony-content .test-
   border: 2px solid #1f7fd6;
   background-repeat: no-repeat;
   background-position: center 0;
-  background-size: contain;
+  background-size: cover;
   background-origin: content-box;
   background-clip: content-box;
 }
@@ -1699,49 +1700,78 @@ div.pop-up-page .image-cont + p + p {
   }
 }
 
-div.pop-up-page .image-cont + p + p + a {
+div.pop-up-page .image-cont + p + p + p {
+  margin-top: 5px;
+  font-size: 1vw;
+  line-height: 1vw;
+  font-weight: 500;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  div.pop-up-page .image-cont + p + p + p {
+    font-size: 1.15vw;
+    line-height: 1.15vw;
+  }
+}
+
+@media (max-width: 768px) {
+  div.pop-up-page .image-cont + p + p + p {
+    font-size: 1.8vw;
+    line-height: 1.8vw;
+  }
+}
+
+@media (max-width: 576px) {
+  div.pop-up-page .image-cont + p + p + p {
+    font-size: 2.7vw;
+    line-height: 2.7vw;
+  }
+}
+
+div.pop-up-page .image-cont + p + p + p + a {
   font-size: 1.5vw;
   color: #1f7fd6;
   text-decoration: underline;
 }
 
 @media (max-width: 992px) {
-  div.pop-up-page .image-cont + p + p + a {
+  div.pop-up-page .image-cont + p + p + p + a {
     font-size: 2vw;
   }
 }
 
 @media (max-width: 768px) {
-  div.pop-up-page .image-cont + p + p + a {
+  div.pop-up-page .image-cont + p + p + p + a {
     font-size: 2.5vw;
   }
 }
 
 @media (max-width: 576px) {
-  div.pop-up-page .image-cont + p + p + a {
+  div.pop-up-page .image-cont + p + p + p + a {
     font-size: 4vw;
   }
 }
 
-div.pop-up-page .image-cont + p + p + a + p {
+div.pop-up-page .image-cont + p + p + p + a + p {
   font-size: 1.05vw;
   font-weight: 500;
 }
 
 @media (max-width: 992px) {
-  div.pop-up-page .image-cont + p + p + a + p {
+  div.pop-up-page .image-cont + p + p + p + a + p {
     font-size: 1.20vw;
   }
 }
 
 @media (max-width: 768px) {
-  div.pop-up-page .image-cont + p + p + a + p {
+  div.pop-up-page .image-cont + p + p + p + a + p {
     font-size: 1.6vw;
   }
 }
 
 @media (max-width: 576px) {
-  div.pop-up-page .image-cont + p + p + a + p {
+  div.pop-up-page .image-cont + p + p + p + a + p {
     font-size: 2.5vw;
   }
 }

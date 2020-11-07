@@ -11,8 +11,8 @@ const repeat = (value, count) => {
 const capitalize = (string) => `${string[0].toUpperCase()}${string.slice(1)}`;
 
 const generateOrderID = ({ fullName, phoneNumber }) => {
-    const name = fullName.substr(0, 7);
-    const pn = phoneNumber.substr(0, 7);
+    const name = fullName.substr(0, 5);
+    const pn = phoneNumber.substr(0, 5);
     const combo = [];
     for (let i = 0; i < name.length; i++) {
         combo.push(name[i]);
@@ -46,6 +46,8 @@ Main Dish Amount: ${mainDishAmount} Naira
 
 Side Dish: ${sideDish}
 Side Dish Amount: ${sideDishAmount} Naira
+
+Total: ${Number(mainDishAmount) + Number(sideDishAmount) + 300} (Delivery Fee Included.)
 `;
 
 export {
