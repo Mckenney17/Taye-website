@@ -14,7 +14,7 @@ import {
 } from './htmlBoilerPlate.js';
 import { implementSearch, pushToSearch } from './dishModalUIFuncs.js';
 import { getDish, setDish } from './sessionStorage.js';
-import setSelectedDish from './orderFormUIFuncs.js';
+import { setSelectedDish } from './orderFormUIFuncs.js';
 const {
     container,
 } = DOMElems;

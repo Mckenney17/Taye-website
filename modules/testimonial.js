@@ -1,8 +1,8 @@
+import Swipe from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js';
 import testimonials from '../admin/updateTestimonials.js';
 import DOMElems from './DOMElems.js';
 import { classAction, insertHtml, select, selectAll } from './DOMFuncs.js';
 import { testimonyBody, testimonyCont } from './htmlBoilerPlate.js';
-import Swipe from './swiper-bundle.esm.browser.min.js';
 const { testimonialsCont, sliderIndicator } = DOMElems;
 
 const chunk = (arr, amt) => {

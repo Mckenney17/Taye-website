@@ -1,9 +1,34 @@
 import DOMElems from './DOMElems.js';
-import { setProp } from './DOMFuncs.js';
-const { mainDishInput, sideDishInput } = DOMElems;
+import {
+    setProp,
+} from './DOMFuncs.js';
+const {
+    fullNameInput,
+    phoneNumberInput,
+    emailInput,
+    fullAddressInput,
+    mainDishInput,
+    sideDishInput,
+    mainDishAmountInput,
+    sideDishAmountInput,
+} = DOMElems;
 
 const setSelectedDish = (type, selectedDishes) => {
     setProp(type === 'main' ? mainDishInput : sideDishInput, 'value', selectedDishes);
 };
 
-export default setSelectedDish;
+const getOrderInputs = () => ({
+    fullName: fullNameInput.value,
+    phoneNumber: phoneNumberInput.value,
+    email: emailInput.value,
+    fullAddress: fullAddressInput.value,
+    mainDish: mainDishInput.value,
+    mainDishAmount: mainDishAmountInput.value,
+    sideDish: sideDishInput.value,
+    sideDishAmount: sideDishAmountInput.value,
+});
+
+export {
+    setSelectedDish,
+    getOrderInputs,
+};

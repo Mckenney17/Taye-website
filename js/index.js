@@ -17,12 +17,15 @@ import {
 import getDishList from '../admin/updateFood.js';
 import implementTestimonials from '../modules/testimonial.js';
 import implementStarRating from '../modules/implementStarRating.js';
+import thankUser from '../modules/thankYou.js';
 
 const {
     getStartedBtn,
     orderNowMobileBtn,
     dishSelectorBtn,
     menuBtn,
+    // orderFormActual,
+    placeOrderBtn,
 } = DOMElems;
 
 event(
@@ -30,14 +33,18 @@ event(
         orderNowMobileBtn,
         getStartedBtn,
         menuBtn,
+        // orderFormActual,
+        placeOrderBtn,
     ],
     [
-        ...repeat('click', 3),
+        ...repeat('click', 4),
+        // 'submit',
     ],
     [
         showOrderForm,
         scrollToHowItWorks,
         toggleMenu,
+        thankUser,
     ],
 );
 

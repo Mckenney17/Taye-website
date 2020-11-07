@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gig Overflow</title>
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/fontawesome_all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -52,31 +54,31 @@
                     <div class="order-form">
                         <p class="form-title">Order Now!</p>
                         <!-- order form section -->
-                        <form action="#" method="post">
+                        <form action=".">
                             <div class="field">
-                                <input type="text" name='fullname' id='fullname' placeholder="Full Name">
+                                <input type="text" name='fullname' id='fullname' placeholder="Full Name" required>
                             </div>
                             <div class="field">
-                                <input type="tel" name='phonenumber' id='phonenumber' placeholder="Phone Number">
+                                <input type="tel" name='phonenumber' id='phonenumber' placeholder="Phone Number" required>
                             </div>
                             <div class="field">
                                 <input type="email" name='email' id='email' placeholder="E-mail">
                             </div>
                             <div class="field">
-                                <input type="text" name='fulladdress' id='fulladdress' placeholder="Full Address">
+                                <input type="text" name='fulladdress' id='fulladdress' placeholder="Full Address" required>
                             </div>
                             <div class="field">
-                                <input disabled type="text" name='main-dish' id='main-dish' placeholder="Main Dish">
-                                <input type="text" name='main-dish-amount' id='main-dish-amount' placeholder="Amount">
+                                <input disabled type="text" name='main-dish' id='main-dish' placeholder="Main Dish" required>
+                                <input type="text" name='main-dish-amount' id='main-dish-amount' placeholder="Amount(Naira)" required>
                                 <span id="main-dish-modal-trigger"></span>
                             </div>
                             <div class="field">
                                 <input disabled type="text" name='side-dish' id='side-dish' placeholder="Side Dish">
-                                <input type="text" name='side-dish-amount' id='side-dish-amount' placeholder="Amount">
+                                <input type="text" name='side-dish-amount' id='side-dish-amount' placeholder="Amount(Naira)">
                                 <span id="side-dish-modal-trigger"></span>
                             </div>
                             <div class="notice">Food + Add-On must 500 Naira in Total</div>
-                            <button type="submit">PLACE YOUR ORDER</button>
+                            <button type="submi">PLACE YOUR ORDER</button>
                         </form>
                     </div>
                 </div>

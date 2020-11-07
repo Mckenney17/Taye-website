@@ -18,7 +18,7 @@ const dishItem = (dishName) => `
     </div>
 `;
 
-const thankYouModal = (orderID, referLink) => `
+const thankYouModal = ({ orderID, message }) => `
     <div class="pop-up-page">
         <span class="screw"></span>
         <span class="screw"></span>
@@ -29,7 +29,7 @@ const thankYouModal = (orderID, referLink) => `
         <div class="image-cont"></div>
         <p>Thank <span>You</span></p>
         <p>Complete your Order via <span>WhatsApp Chat</span></p>
-        <a href="${referLink}">Click to Continue</a>
+        <a href="https://api.whatsapp.com/send?phone=2348130768048&text=${message}">Click to Continue</a>
         <p>Your <span>Order ID</span>: ${orderID}</p>
     </div>
 `;

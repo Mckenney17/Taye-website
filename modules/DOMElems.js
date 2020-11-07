@@ -8,19 +8,26 @@ const DOMElems = {
     orderNowMobileBtn: select('#order-now-mobile'),
     orderNowLargeBtn: select('#order-now-large'),
     orderForm: select('.landing-contents .item-2'),
-    mainDishInput: select('#main-dish'),
-    sideDishInput: select('#side-dish'),
-    mainDishAmountInput: select('#main-dish-amount'),
-    sideDishAmountInput: select('#side-dish-amount'),
     dishSelectorModal: select('.dish-list'),
     errorNotice: select('.order-form .notice'),
-    placeOrderBtn: select('.order-form button[type="submit"]'),
+    orderFormActual: select('.order-form form'),
+    placeOrderBtn: select('.order-form button[type="submi"]'),
     howItWorksSection: select('.how-it-works-section'),
     dishSelectorBtn: selectAll('.field span[id*=trigger]'),
     testimonialsCont: select('.testimonials-cont'),
     sliderIndicator: select('.caro-nav'),
     starRating: selectAll('.review-service i'),
     starRatingInputValue: select('input#star-rating'),
+
+
+    fullNameInput: select('.order-form input#fullname'),
+    phoneNumberInput: select('.order-form input#phonenumber'),
+    emailInput: select('.order-form input#email'),
+    fullAddressInput: select('.order-form input#fulladdress'),
+    mainDishInput: select('.order-form input#main-dish'),
+    sideDishInput: select('.order-form input#side-dish'),
+    mainDishAmountInput: select('.order-form input#main-dish-amount'),
+    sideDishAmountInput: select('.order-form input#side-dish-amount'),
 };
 
 export default DOMElems;
