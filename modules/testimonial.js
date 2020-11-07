@@ -1,9 +1,20 @@
 import Swipe from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js';
 import testimonials from '../admin/updateTestimonials.js';
 import DOMElems from './DOMElems.js';
-import { classAction, insertHtml, select, selectAll } from './DOMFuncs.js';
-import { testimonyBody, testimonyCont } from './htmlBoilerPlate.js';
-const { testimonialsCont, sliderIndicator } = DOMElems;
+import {
+    classAction,
+    insertHtml,
+    select,
+    selectAll,
+} from './DOMFuncs.js';
+import {
+    testimonyBody,
+    testimonyCont,
+} from './htmlBoilerPlate.js';
+const {
+    testimonialsCont,
+    sliderIndicator,
+} = DOMElems;
 
 const chunk = (arr, amt) => {
     let ct = 0;
@@ -16,10 +27,15 @@ const chunk = (arr, amt) => {
             acc[ct].push(v);
         }
         return acc;
-    }, [[]]);
+    }, [
+        [],
+    ]);
 };
 
-const implementStarRating = ({ star: filledStars, testifierId }) => {
+const implementStarRating = ({
+    star: filledStars,
+    testifierId,
+}) => {
     const emptyStars = 5 - filledStars;
     for (let j = 0; j < filledStars; j++) {
         insertHtml(select(`#test-star-testifier-${testifierId}`), 'beforeend', '<i class="fas fa-star"></i>');

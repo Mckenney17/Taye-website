@@ -22,7 +22,7 @@ button, input, div.footer div[class|="item"] > div .review-form textarea, textar
   border: none;
 }
 
-button, input, div.footer div[class|="item"] > div .review-form textarea {
+* {
   -webkit-tap-highlight-color: transparent;
 }
 
