@@ -26,8 +26,6 @@ const sideDishes = [
     'Gin',
     'Fura',
     'Kunu',
-    'Others(alcoholic)',
-    'Others(non alcoholic)',
     'Palm Wine',
     'Pepsi',
     'Wine',

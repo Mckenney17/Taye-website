@@ -31,7 +31,7 @@ const dishModal = (type, dishList) => {
     }, 1);
 
     for (const dishName of dishList) {
-        insertHtml(select(`#${type}-dish-list`), 'beforeend', dishItem(dishName));
+        insertHtml(select(`#${type}-dish-list-cont`), 'beforeend', dishItem(dishName));
         const asId = dishName.split(/\W+/gu).join('');
         event(select(`#${asId}-dish-div`), 'click', () => {
             if (type === 'main') {

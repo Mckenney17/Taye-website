@@ -8,6 +8,9 @@ const dishSelectorModal = (dishType) => `
             <input type="text" id='${dishType}-dish-search-input' placeholder="${capitalize(dishType)} Dish">
             <button class='set-dish' id='set-${dishType}-dish'>SET</button>
         </div>
+        <div class="dish-list-cont" id="${dishType}-dish-list-cont">
+
+        </div>
     </div>
 `;
 const dishItem = (dishName) => {

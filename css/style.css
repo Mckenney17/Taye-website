@@ -588,6 +588,13 @@ div.landing-page .landing-contents .item-2 .order-form {
   }
 }
 
+@media (max-width: 576px) {
+  div.landing-page .landing-contents .item-2 .order-form {
+    height: auto;
+    padding-bottom: 15px;
+  }
+}
+
 div.landing-page .landing-contents .item-2 .order-form .form-title {
   text-align: center;
   font-size: 30px;
@@ -1407,8 +1414,8 @@ div.dish-list {
   max-width: 296px;
   min-width: 296px;
   background: #fff;
-  height: 500px;
-  top: 8%;
+  height: 80%;
+  top: 10vh;
   bottom: 0;
   left: 0;
   right: 0;
@@ -1417,7 +1424,13 @@ div.dish-list {
   border-radius: 5px;
   -webkit-box-shadow: 0 0 60px 30px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 60px 30px rgba(0, 0, 0, 0.3);
-  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   display: none;
   opacity: 0;
   -webkit-transition: opacity .25s linear;
@@ -1431,11 +1444,8 @@ div.dish-list {
 }
 
 div.dish-list .search-bar {
-  position: -webkit-sticky;
-  position: sticky;
-  z-index: 3;
-  top: 10px;
-  width: 90%;
+  width: 100%;
+  padding: 0 5%;
   margin: 10px auto;
   background: #fff;
   height: 45px;
@@ -1468,7 +1478,12 @@ div.dish-list .search-bar button {
   line-height: 15px;
 }
 
-div.dish-list .dish {
+div.dish-list .dish-list-cont {
+  overflow-y: auto;
+  height: 85%;
+}
+
+div.dish-list .dish-list-cont .dish {
   cursor: pointer;
   width: 90%;
   margin: 0 auto;
@@ -1485,7 +1500,7 @@ div.dish-list .dish {
           align-items: center;
 }
 
-div.dish-list .dish .dish-selector {
+div.dish-list .dish-list-cont .dish .dish-selector {
   cursor: pointer;
   position: relative;
   width: 25px;
@@ -1495,7 +1510,7 @@ div.dish-list .dish .dish-selector {
   margin-right: 10px;
 }
 
-div.dish-list .dish .dish-selector.selected-main-dish::after, div.dish-list .dish .dish-selector.selected-side-dish::after {
+div.dish-list .dish-list-cont .dish .dish-selector.selected-main-dish::after, div.dish-list .dish-list-cont .dish .dish-selector.selected-side-dish::after {
   content: "";
   position: absolute;
   margin: auto;
