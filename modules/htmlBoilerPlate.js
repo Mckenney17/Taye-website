@@ -40,7 +40,7 @@ const thankYouModal = ({
         <p>Thank <span>You</span></p>
         <p>Complete your Order via <span>WhatsApp Chat</span></p>
         <p>Order Price: <span>${orderPrice}</span>, Delivery Price: <span>${deliveryPrice}</span><br>Total Price: <span>${totalPrice} Naira</span></p>
-        <a href="https://api.whatsapp.com/send?phone=2348130768048&text=${message}">Click to Continue</a>
+        <a href="https://api.whatsapp.com/send?phone=2348130768048&text=${message}"><i class="fab fa-whatsapp fa-fw"></i>Click to Continue<i class="fab fa-whatsapp fa-fw"></i></a>
         <p>Your <span>Order ID</span>: ${orderID}</p>
     </div>
 `;
