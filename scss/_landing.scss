@@ -1,15 +1,9 @@
 div.landing-page {
-    background: url(../img/landing_img.jpg) no-repeat;
-    background-size: cover;
-    // background-clip: border-box;
-    // background-origin: border-box;
+    background: url(../img/landing_img.jpg) no-repeat center/cover;
     width: 100vw;
     height: 100%;
     position: relative;
     z-index: 1;
-    @include small-laptop-up {
-        // padding: 0 slice(200px);
-    }
     @include flex(center);
 
     &::after {
@@ -19,7 +13,7 @@ div.landing-page {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(#000, .25);
+        background: rgba(#000, .5);
         z-index: -1;
     }
 

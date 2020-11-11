@@ -27,6 +27,7 @@ button, input, textarea {
 html, body {
   width: 100%;
   height: 100%;
+  font-family: Poppins;
 }
 
 .container {
@@ -44,7 +45,7 @@ html, body {
           align-items: center;
 }
 
-.container .order-form {
+.container .order-form form {
   overflow-y: auto;
   position: fixed;
   font-family: Dosis;
@@ -54,15 +55,15 @@ html, body {
   left: 0;
   margin: auto;
   width: 296px;
-  height: 485px;
+  max-height: 485px;
   background: #fff;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-  padding: 20px 20px 20px;
+  padding: 20px 20px 0px;
 }
 
-.container .order-form .form-title {
+.container .order-form form .form-title {
   text-align: center;
   font-size: 30px;
   font-weight: 700;
@@ -164,7 +165,7 @@ div.dish-list {
   max-width: 296px;
   min-width: 296px;
   background: #fff;
-  height: 90%;
+  max-height: 90%;
   top: 0;
   bottom: 0;
   left: 0;
@@ -303,8 +304,10 @@ div.pop-up-page {
   left: 0;
   right: 0;
   margin: auto;
-  z-index: 3;
+  z-index: 5;
   border-radius: 25px;
+  -webkit-box-shadow: 0 0 60px 30px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 60px 30px rgba(0, 0, 0, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -330,39 +333,33 @@ div.pop-up-page {
   }
 }
 
-@media (max-width: 768px) {
-  div.pop-up-page {
-    height: 60%;
-  }
-}
-
 div.pop-up-page .screw {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   background: #1f7fd6;
   border-radius: 50%;
   border: 5px solid #070782;
 }
 
 div.pop-up-page .screw:nth-child(1) {
-  left: slice(23px);
-  top: slice(23px);
+  left: 15.87px;
+  top: 15.87px;
 }
 
 div.pop-up-page .screw:nth-child(2) {
-  right: slice(23px);
-  top: slice(23px);
+  right: 15.87px;
+  top: 15.87px;
 }
 
 div.pop-up-page .screw:nth-child(3) {
-  left: slice(23px);
-  bottom: slice(23px);
+  left: 15.87px;
+  bottom: 15.87px;
 }
 
 div.pop-up-page .screw:nth-child(4) {
-  right: slice(23px);
-  bottom: slice(23px);
+  right: 15.87px;
+  bottom: 15.87px;
 }
 
 div.pop-up-page span {
@@ -413,7 +410,8 @@ div.pop-up-page .image-cont + p {
 
 @media (max-width: 576px) {
   div.pop-up-page .image-cont + p {
-    font-size: 8vw;
+    font-size: 10vw;
+    line-height: 10vw;
   }
 }
 
@@ -437,15 +435,15 @@ div.pop-up-page .image-cont + p + p {
 
 @media (max-width: 768px) {
   div.pop-up-page .image-cont + p + p {
-    font-size: 1.6vw;
-    line-height: 1.6vw;
+    font-size: 2.6vw;
+    line-height: 2.6vw;
   }
 }
 
 @media (max-width: 576px) {
   div.pop-up-page .image-cont + p + p {
-    font-size: 2.5vw;
-    line-height: 2.5vw;
+    font-size: 3.5vw;
+    line-height: 3.5vw;
   }
 }
 
@@ -467,14 +465,14 @@ div.pop-up-page .image-cont + p + p + p {
 @media (max-width: 768px) {
   div.pop-up-page .image-cont + p + p + p {
     font-size: 1.8vw;
-    line-height: 1.8vw;
+    line-height: 2.8vw;
   }
 }
 
 @media (max-width: 576px) {
   div.pop-up-page .image-cont + p + p + p {
-    font-size: 2.7vw;
-    line-height: 2.7vw;
+    font-size: 3.7vw;
+    line-height: 4.7vw;
   }
 }
 
@@ -498,7 +496,7 @@ div.pop-up-page .image-cont + p + p + p + a {
 
 @media (max-width: 576px) {
   div.pop-up-page .image-cont + p + p + p + a {
-    font-size: 4vw;
+    font-size: 6vw;
   }
 }
 
@@ -521,7 +519,7 @@ div.pop-up-page .image-cont + p + p + p + a + p {
 
 @media (max-width: 576px) {
   div.pop-up-page .image-cont + p + p + p + a + p {
-    font-size: 2.5vw;
+    font-size: 3.5vw;
   }
 }
 

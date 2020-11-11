@@ -235,10 +235,10 @@ div.pop-up-page {
                 & + p {
                     margin-top: 5px;
                     font-size: 1vw;
-                    line-height: 1vw;
+                    line-height: 2vw;
                     @include small-laptop {
                         font-size: 1.15vw;
-                        line-height: 1.15vw;
+                        line-height: 2.15vw;
                     }
                     @include tablet {
                         font-size: 1.8vw;

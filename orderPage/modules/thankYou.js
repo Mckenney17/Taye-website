@@ -7,7 +7,6 @@ import {
 } from './orderFormUIFuncs.js';
 import DOMElems from '../../modules/DOMElems.js';
 import {
-    classAction,
     event,
     insertHtml,
     select,
@@ -33,11 +32,13 @@ const thankUser = () => {
         totalPrice: Number(mainDishAmount) + Number(sideDishAmount) + 300,
     }));
     setStyle(select('.pop-up-page'), 'display', 'flex');
+    setStyle(select('.order-form'), 'display', 'none');
     setTimeout(() => {
         setStyle(select('.pop-up-page'), 'opacity', '1');
     }, 1);
     event(select('.pop-up-page a'), 'click', () => {
         setProp(select('.pop-up-page'), 'outerHTML', '');
+        setStyle(select('.order-form'), 'display', 'block');
     });
 };
 
