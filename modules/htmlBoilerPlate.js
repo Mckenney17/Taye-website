@@ -35,7 +35,7 @@ const thankYouModal = ({
         <span class="screw"></span>
         <span class="screw"></span>
 
-        <img src="./img/logo.png" alt="">
+        <img src="/img/logo.png" alt="">
         <div class="image-cont"></div>
         <p>Thank <span>You</span></p>
         <p>Complete your Order via <span>WhatsApp Chat</span></p>

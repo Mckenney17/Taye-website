@@ -6,7 +6,7 @@ import {
 import DOMElems from './DOMElems.js';
 import displayDishModal from './dishModal.js';
 const {
-    orderForm,
+    // orderForm,
     howItWorksSection,
     menuBtn,
     menu,
@@ -29,14 +29,14 @@ const scrollToHowItWorks = () => {
     anim();
 };
 
-const hideOrderForm = () => {
+/* const hideOrderForm = () => {
     setStyle(orderForm, 'opacity', 0);
     setTimeout(() => {
         setStyle(orderForm, 'display', 'none');
     }, 250);
-};
+}; */
 
-const showOrderForm = () => {
+/* const showOrderForm = () => {
     setStyle(orderForm, 'display', 'flex');
     setTimeout(() => {
         setStyle(orderForm, 'opacity', 1);
@@ -46,16 +46,16 @@ const showOrderForm = () => {
             if (ev.target.classList.contains('item-2')) hideOrderForm();
         }
     });
-};
+}; */
 
 const showDishSelector = (type, dishList) => {
     displayDishModal(type, dishList);
 };
 
 export {
-    showOrderForm,
+    // showOrderForm,
     showDishSelector,
     scrollToHowItWorks,
-    hideOrderForm,
+    // hideOrderForm,
     toggleMenu,
 };

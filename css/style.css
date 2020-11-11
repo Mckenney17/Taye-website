@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 ul {
@@ -20,10 +21,6 @@ a:hover {
 button, input, div.footer div[class|="item"] > div .review-form textarea, textarea {
   outline: none;
   border: none;
-}
-
-* {
-  -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -492,6 +489,24 @@ div.landing-page .landing-contents .item-1 div.landing-prim-content .ctas button
     background: transparent;
     border: 1px solid;
     margin-top: 10px;
+  }
+  div.landing-page .landing-contents .item-1 div.landing-prim-content .ctas button:last-child a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  div.landing-page .landing-contents .item-1 div.landing-prim-content .ctas button:last-child a:hover, div.landing-page .landing-contents .item-1 div.landing-prim-content .ctas button:last-child a:active {
+    text-decoration: none;
   }
 }
 

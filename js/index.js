@@ -11,7 +11,7 @@ import {
 import {
     scrollToHowItWorks,
     showDishSelector,
-    showOrderForm,
+    // showOrderForm,
     toggleMenu,
 } from '../modules/appUIFuncs.js';
 import getDishList from '../admin/updateFood.js';
@@ -21,7 +21,7 @@ import thankUser from '../modules/thankYou.js';
 
 const {
     getStartedBtn,
-    orderNowMobileBtn,
+    // orderNowMobileBtn,
     dishSelectorBtn,
     menuBtn,
     orderNowLargeBtn,
@@ -31,7 +31,7 @@ const {
 
 event(
     [
-        orderNowMobileBtn,
+        // orderNowMobileBtn,
         getStartedBtn,
         menuBtn,
         orderNowLargeBtn,
@@ -39,11 +39,11 @@ event(
         orderFormActual,
     ],
     [
-        ...repeat('click', 5),
+        ...repeat('click', 4),
         'submit',
     ],
     [
-        showOrderForm,
+        // showOrderForm,
         scrollToHowItWorks,
         toggleMenu,
         ...repeat(

@@ -5,7 +5,6 @@ const DOMElems = {
     menuBtn: select('.hamburger'),
     menu: select('.nav'),
     getStartedBtn: select('.get-started'),
-    orderNowMobileBtn: select('#order-now-mobile'),
     orderNowLargeBtn: select('#order-now-large'),
     orderNowMiddleBtn: select('#order-now-middle'),
     orderForm: select('.landing-contents .item-2'),
