@@ -369,7 +369,7 @@ div.pop-up-page span {
 div.pop-up-page .image-cont {
   width: 50%;
   height: 200px;
-  background: url(../img/thank_you.png) no-repeat center/contain;
+  background: url(../../img/thank_you.png) no-repeat center/contain;
 }
 
 @media (max-width: 992px) {
