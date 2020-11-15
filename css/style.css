@@ -1481,6 +1481,7 @@ div.dish-list .search-bar input, div.dish-list .search-bar div.footer div[class|
 
 div.dish-list .search-bar input::-webkit-input-placeholder, div.dish-list .search-bar div.footer div[class|="item"] > div .review-form textarea::-webkit-input-placeholder, div.footer div[class|="item"] > div .review-form div.dish-list .search-bar textarea::-webkit-input-placeholder {
   color: #ccc;
+  font-size: 16px;
 }
 
 div.dish-list .search-bar button {
