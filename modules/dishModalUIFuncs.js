@@ -13,13 +13,13 @@ const implementSearch = (dishType) => {
     const searchInput = select(`#${dishType}-dish-search-input`);
     event(searchInput, 'input', (ev) => {
         [...selectAll('.dish-name')]
-        .filter((elem) => !elem.textContent.toLowerCase().startsWith(searchInput.value.toLowerCase()))
+        .filter((elem) => !elem.textContent.toLowerCase().includes(searchInput.value.toLowerCase()))
             .forEach((elem) => {
                 setStyle(elem.parentElement, 'display', 'none');
             });
 
         [...selectAll('.dish-name')]
-        .filter((elem) => elem.textContent.toLowerCase().startsWith(searchInput.value.toLowerCase()))
+        .filter((elem) => elem.textContent.toLowerCase().includes(searchInput.value.toLowerCase()))
             .forEach((elem) => {
                 setStyle(elem.parentElement, 'display', 'flex');
             });

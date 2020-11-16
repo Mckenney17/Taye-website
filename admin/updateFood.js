@@ -2,7 +2,6 @@ const mainDishes = [
     'Adalu',
     'Beans(Ewa)',
     'Ewa Aganyin',
-    'Moi Moi',
     'Amala',
     'Amala lafun',
     'Asaro',
@@ -70,6 +69,6 @@ const sideDishes = [
     'Pepper soup',
 ];
 
-const getDishList = (type) => (type === 'main' ? [...new Set(mainDishes)] : [...new Set(sideDishes)]);
+const getDishList = (type) => (type === 'main' ? [...new Set(mainDishes.sort((a, b) => a.localeCompare(b)))] : [...new Set(sideDishes.sort((a, b) => a.localeCompare(b)))]);
 
 export default getDishList;

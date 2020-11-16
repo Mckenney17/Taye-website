@@ -5,7 +5,7 @@ import {
 const dishSelectorModal = (dishType) => `
     <div class="dish-list" id="${dishType}-dish-list">
         <div class="search-bar">
-            <input type="text" id='${dishType}-dish-search-input' placeholder="Search/Type New/Select">
+            <input type="text" id='${dishType}-dish-search-input' placeholder="Search/Select/Enter Dish">
             <button class='set-dish' id='set-${dishType}-dish'>SET</button>
         </div>
         <div class="dish-list-cont" id="${dishType}-dish-list-cont">
